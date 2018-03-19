@@ -1,0 +1,414 @@
+#
+# Apache/PHP/Drupal settings:
+#
+
+# Protect files and directories from prying eyes.
+<FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\..*|Entries.*|Repository|Root|Tag|Template)$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig\.save)$">
+  Order allow,deny
+</FilesMatch>
+
+# Don't show directory listings for URLs which map to a directory.
+Options -Indexes
+
+# Follow symbolic links in this directory.
+Options +FollowSymLinks
+
+# Make Drupal handle any 404 errors.
+ErrorDocument 404 /index.php
+
+# Set the default handler.
+DirectoryIndex index.php index.html index.htm
+
+# Override PHP settings that cannot be changed at runtime. See
+# sites/default/default.settings.php and drupal_environment_initialize() in
+# includes/bootstrap.inc for settings that can be changed at runtime.
+
+# PHP 5, Apache 1 and 2.
+<IfModule mod_php5.c>
+  php_flag magic_quotes_gpc                 off
+  php_flag magic_quotes_sybase              off
+  php_flag register_globals                 off
+  php_flag session.auto_start               off
+  php_value mbstring.http_input             pass
+  php_value mbstring.http_output            pass
+  php_flag mbstring.encoding_translation    off
+</IfModule>
+
+# Requires mod_expires to be enabled.
+#schleif note - this block appears to cause the ERR_TOO_MANY_REDIRECTS problems, so I'm commenting it the hell out
+#<IfModule mod_expires.c>
+  # Enable expirations.
+  # ExpiresActive On
+
+  # Cache all files for 2 weeks after access (A).
+  # ExpiresDefault A1209600
+
+  #<FilesMatch \.php$>
+    # Do not allow PHP scripts to be cached unless they explicitly send cache
+    # headers themselves. Otherwise all scripts would have to overwrite the
+    # headers set by mod_expires if they want another caching behavior. This may
+    # fail if an error occurs early in the bootstrap process, and it may cause
+    # problems if a non-Drupal PHP file is installed in a subdirectory.
+    # ExpiresActive Off
+  #</FilesMatch>
+#</IfModule>
+
+# Various rewrite rules.
+#<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # Set "protossl" to "s" if we were accessed via https://.  This is used later
+  # if you enable "www." stripping or enforcement, in order to ensure that
+  # you don't bounce between http and https.
+  RewriteRule ^ - [E=protossl]
+  RewriteCond %{HTTPS} on
+  RewriteRule ^ - [E=protossl:s]
+
+  # Make sure Authorization HTTP header is available to PHP
+  # even when running as CGI or FastCGI.
+  RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # Block access to "hidden" directories whose names begin with a period. This
+  # includes directories used by version control systems such as Subversion or
+  # Git to store control files. Files whose names begin with a period, as well
+  # as the control files used by CVS, are protected by the FilesMatch directive
+  # above.
+  #
+  # NOTE: This only works when mod_rewrite is loaded. Without mod_rewrite, it is
+  # not possible to block access to entire directories from .htaccess, because
+  # <DirectoryMatch> is not allowed here.
+  #
+  # If you do not have mod_rewrite installed, you should remove these
+  # directories from your webroot or otherwise protect them from being
+  # downloaded.
+  RewriteRule "(^|/)\." - [F]
+
+  # If your site can be accessed both with and without the 'www.' prefix, you
+  # can use one of the following settings to redirect users to your preferred
+  # URL, either WITH or WITHOUT the 'www.' prefix. Choose ONLY one option:
+  #
+  # To redirect all users to access the site WITH the 'www.' prefix,
+  # (http://example.com/... will be redirected to http://www.example.com/...)
+  # uncomment the following:
+  # RewriteCond %{HTTP_HOST} .
+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
+  # RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  #
+  # To redirect all users to access the site WITHOUT the 'www.' prefix,
+  # (http://www.example.com/... will be redirected to http://example.com/...)
+  # uncomment the following:
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+
+  # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
+  # VirtualDocumentRoot and the rewrite rules are not working properly.
+  # For example if your site is at http://example.com/drupal uncomment and
+  # modify the following line:
+  # RewriteBase /drupal
+  #
+  # If your site is running in a VirtualDocumentRoot at http://example.com/,
+  # uncomment the following line:
+  # RewriteBase /
+  
+#added 3/16/16 because Content Access sucks - remove ASAP
+ RewriteCond %{REQUEST_URI} ^/cohort/stories?$
+ RewriteRule (.*) https://backstage.its.umich.edu/dei/ [L,R]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^communication/television-video/mivideo/request https://its.umich.edu/communication/television-video/mivideo/request [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^computing/backup-storage/mivideo/request https://its.umich.edu/computing/backup-storage/mivideo/request [L,R=301] 
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^news/data-warehouse-oracle-upgrade https://its.umich.edu/news/data-warehouse-oracle-upgrade [L,R=301] 
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^news/mcard-database-oracle-upgrade https://its.umich.edu/news/mcard-database-oracle-upgrade [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^news/financials-physical-resources-system-upgrade-2016 https://its.umich.edu/news/financials-physical-resources-system-upgrade-2016 [L,R=301] 
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^news/student-administration-oracle-upgrade https://its.umich.edu/news/student-administration-oracle-upgrade [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^news/human-resource-management-system-oracle-upgrade https://its.umich.edu/news/human-resource-management-system-oracle-upgrade [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^news/nextgen-data-warehouse-oracle-upgrade https://its.umich.edu/news/nextgen-data-warehouse-oracle-upgrade [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^communication/television-video/video-streaming/request-form https://its.umich.edu/communication/television-video/video-streaming/request-form [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^about/web-team-request https://its.umich.edu/about/web-team-request [L,R=301]
+
+ #RewriteCond %{HTTPS} off
+ #RewriteRule ^iq/contact https://its.umich.edu/iq/contact-form [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^iq/contact-form https://its.umich.edu/iq/contact-form [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^iq/metrics https://its.umich.edu/iq/metrics [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^communication/videoconferencing/room-systems/registration https://its.umich.edu/communication/videoconferencing/room-systems/registration [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^enterprise/wifi-networks/campus-building-network-connections https://its.umich.edu/enterprise/wifi-networks/campus-building-network-connections [L,R=301]
+
+
+
+RewriteCond %{REQUEST_URI} ^/projects/canvas/$
+RewriteCond %{QUERY_STRING}  ^q=project-sites$
+RewriteRule ^(.*)$ http://its.umich.edu/projects/ctools-project-sites/? [NC,R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/projects/canvas/$
+RewriteCond %{QUERY_STRING}  ^q=instructor-guide/administrators$
+RewriteRule ^(.*)$ https://umich.instructure.com/courses/200/pages/u-m-canvas-instructor-guide? [NC,R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/projects/canvas/$
+RewriteCond %{QUERY_STRING}  ^q=students$
+RewriteRule ^(.*)$ http://documentation.its.umich.edu/node/396? [NC,R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/projects/canvas/$
+RewriteCond %{QUERY_STRING}  ^q=instructor-guide$
+RewriteRule ^(.*)$ https://umich.instructure.com/courses/200/pages/u-m-canvas-instructor-guide? [NC,R=301,L]
+
+#RewriteCond %{REQUEST_URI} /projects/canvas/
+RewriteCond %{QUERY_STRING}  ^q=instructors$
+RewriteRule ^(.*)$ https://canvas.umich.edu/? [NC,R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/projects/canvas/$
+RewriteCond %{QUERY_STRING}  ^q=timeline$
+RewriteRule ^(.*)$ https://canvas.umich.edu/? [NC,R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/projects/canvas/$
+
+
+
+
+
+RewriteCond %{QUERY_STRING}  ^q=contact$
+RewriteRule ^(.*)$ https://canvas.umich.edu/? [NC,R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/projects/canvas/$
+RewriteCond %{QUERY_STRING}  ^q=accessibility$
+RewriteRule ^(.*)$ http://its.umich.edu/computing/accessible-computing/canvas? [NC,R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/projects/canvas/$ [NC]
+RewriteCond %{QUERY_STRING}  ^q=news$
+RewriteRule ^(.*)$ https://umich.instructure.com/courses/200/pages/u-m-canvas-instructor-guide? [NC,R=301,L]
+
+RedirectMatch 301 /projects/mfauth(.*) /two-factor-authentication
+RewriteRule ^.*building-the-build/?$ http://its.umich.edu/? [L,R=301]
+#RedirectMatch 301 ^/building-the-build/ /?
+
+#******************************************************
+# put rewriterules above this line, if you can
+#******************************************************
+
+  # Pass all requests not referring directly to files in the filesystem to
+  # index.php. Clean URLs are handled in drupal_environment_initialize().
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !=/favicon.ico
+  RewriteRule ^ index.php [L]
+
+  # Rules to correctly serve gzip compressed CSS and JS files.
+  # Requires both mod_rewrite and mod_headers to be enabled.
+  <IfModule mod_headers.c>
+    # Disable content sniffing, since it's an attack vector.
+    Header always set X-Content-Type-Options nosniff
+    # Disable Proxy header, since it's an attack vector.
+    RequestHeader unset Proxy    
+  
+    # Serve gzip compressed CSS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.css $1\.css\.gz [QSA]
+
+    # Serve gzip compressed JS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.js $1\.js\.gz [QSA]
+
+    # Serve correct content types, and prevent mod_deflate double gzip.
+    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1]
+    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1]
+
+    <FilesMatch "(\.js\.gz|\.css\.gz)$">
+      # Serve correct encoding type.
+      Header set Content-Encoding gzip
+      # Force proxies to cache gzipped & non-gzipped css/js files separately.
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+  </IfModule>
+#COMMENTED OUT, PER https://knowledgebase.umich.edu/ITS_virtual_hosting_drupals
+#</IfModule>
+
+#added so human-created folders bounce back to Drupal
+  
+ RewriteCond %{REQUEST_URI} ^/projects/?$
+ RewriteRule ^ index.php [L]
+ 
+ RewriteCond %{REQUEST_URI} ^/projects/umhs/?$
+ RewriteRule ^ index.php [L]
+
+ RewriteCond %{REQUEST_URI} ^/student-jobs/?$
+ RewriteRule ^ index.php [L]
+ 
+ RewriteCond %{REQUEST_URI} ^/miworkspace/?$
+ RewriteRule ^ index.php [L] 
+
+ Redirect 301 /vulnerabilityscan /it-security-essential
+
+#REDIRECTS FROM ITS WEBSITE
+
+Redirect 301 /about/ITS-Open-Projects.xls https://drive.google.com/a/umich.edu/file/d/0B_rVdFckkPRebDA3NmZIVjY0aWc/view?usp=sharing
+Redirect 301 /atcs/ http://itcs.umich.edu/atcs/
+Redirect 301 /atcs http://itcs.umich.edu/atcs
+Redirect 301 /assistive-tech http://www.itcs.umich.edu/atcs/software-equipment.php
+Redirect 301 /Battle2013/ /battle2013/
+Redirect 301 /bluedisc/ http://itcs.umich.edu/bluedisc/
+Redirect 301 /bluedisc http://itcs.umich.edu/bluedisc
+#Redirect 301 /bluejeans/ http://www.itcom.itd.umich.edu/videoconferencing/bluejeans/
+#Redirect 301 /bluejeans http://www.itcom.itd.umich.edu/videoconferencing/bluejeans
+
+Redirect 301 /contact /help
+Redirect 301 /csdc/ http://itcom.itd.umich.edu/
+Redirect 301 /csdc http://itcom.itd.umich.edu
+Redirect 301 /dev/web-strategy/ http://itcs.umich.edu/test/web-strategy/
+Redirect 301 /dev/web-strategy http://itcs.umich.edu/test/web-strategy
+Redirect 301 /deviceconnectionguide/ http://its.umich.edu/computing/wifi-network/device-connection-guide
+Redirect 301 /deviceconnectionguide http://its.umich.edu/computing/wifi-network/device-connection-guide
+Redirect 301 /digital-signage http://www.itcs.umich.edu/digital-signage
+Redirect 301 /education /training
+Redirect 301 /eduroam/ http://www.itcom.itd.umich.edu/wireless/eduroam.php
+Redirect 301 /flux http://www.itcs.umich.edu/flux
+Redirect 301 /frguide http://www.itcs.umich.edu/frguide
+#Redirect 301 /getconnected/ http://itcs.umich.edu/getconnected/
+#Redirect 301 /getconnected http://itcs.umich.edu/getconnected
+Redirect 301 /HELP /help
+Redirect 301 /infrastructure/lines-of-business.pdf https://drive.google.com/open?id=0B008tCed19HSOGZlanRvRHpINGs
+Redirect 301 /ipvoice/ http://itcom.itcs.umich.edu/ipvoice/
+Redirect 301 /leadership/ /about/leadership/
+Redirect 301 /leadership /about/leadership
+Redirect 301 /mcommunity http://itcs.umich.edu/mcommunity
+Redirect 301 /mcoverage/ /communication/telephone/cellular/mcoverage
+Redirect 301 /mcoverage /communication/telephone/cellular/mcoverage
+Redirect 301 /mcoverageteamchat https://www.hipchat.com/gGLswmfA6
+Redirect 301 /mcoverage-feedback https://docs.google.com/a/umich.edu/forms/d/1hppx1c3HC2htCgrsrO86iMLFQyLrE_sr6wbgeCsm50c/viewform
+Redirect 301 /mcoverage-users https://mcommunity.umich.edu/#group:MCoverage%20Users
+Redirect 301 /mhealthy/ http://www.hr.umich.edu/mhealthy/programs/rewards/hq.html
+Redirect 301 /mobile-challenge http://mobileapps.umich.edu/mobile-challenge
+Redirect 301 /mobiperfteamchat https://www.hipchat.com/gGLswmfA6
+Redirect 301 /mwireless/ http://itcom.itd.umich.edu/wireless/
+Redirect 301 /mwireless http://itcom.itd.umich.edu/wireless
+Redirect 301 /nextgen/ http://nextgen.umich.edu/
+Redirect 301 /northwood/ http://itcom.itd.umich.edu/northwood/
+Redirect 301 /northwood http://itcom.itd.umich.edu/northwood
+Redirect 301 /orgchart/ /leadership/
+Redirect 301 /projects/vcm/ http://services.it.umich.edu/mivideo
+Redirect 301 /properuse http://www.itcs.umich.edu/itcsdocs/r1103/
+Redirect 301 /repair/ /tech-repair
+
+Redirect 301 /shared-services/overview.php http://miworkspace.it.umich.edu/learn/about/shared-service-overview.php
+Redirect 301 /shared-services/plan-ahead.php http://miworkspace.it.umich.edu/learn/for-unit-leadership/plan-ahead.php
+Redirect 301 /shared-services/its-shared-services.php http://services.it.umich.edu/
+Redirect 301 /shared-services/working-together.php http://miworkspace.it.umich.edu/learn/for-unit-leadership/
+Redirect 301 /shared-services/technical-discovery.php http://miworkspace.it.umich.edu/learn/for-it-professionals/
+Redirect 301 /shared-services/learn-more.php http://miworkspace.it.umich.edu/learn/about/
+Redirect 301 /shared-services/printable-resources.php http://miworkspace.it.umich.edu/learn/about/workforce-changes/
+Redirect 301 /shared-services/it-professionals.php http://miworkspace.it.umich.edu/learn/for-it-professionals/
+Redirect 301 /shared-services/moving-to-its.php http://miworkspace.it.umich.edu/learn/about/workforce-changes/
+Redirect 301 /shared-services/outreach-events.php http://miworkspace.it.umich.edu/learn/about/workforce-changes/
+Redirect 301 /shared-services/workforce-strategy.php http://miworkspace.it.umich.edu/learn/about/workforce-changes/
+Redirect 301 /shared-services/transition-timeline.php http://miworkspace.it.umich.edu/learn/about/workforce-changes/
+Redirect 301 /shared-services/my-job.php http://miworkspace.it.umich.edu/learn/about/workforce-changes/
+Redirect 301 /shared-services/teams-roles.php http://miworkspace.it.umich.edu/learn/about/workforce-changes/
+Redirect 301 /shared-services/faq/ http://miworkspace.it.umich.edu/learn/learn-more/faq.php
+Redirect 301 /shared-services/contact/ http://miworkspace.it.umich.edu/learn/contact/
+Redirect 301 /shared-services/index.php http://miworkspace.it.umich.edu/learn/about/shared-service-model.php
+
+Redirect 301 /sites/connect/ http://itcs.umich.edu/sites/connect/
+Redirect 301 /sites/connect http://itcs.umich.edu/sites/connect
+Redirect 301 /sites/index.php http://itcs.umich.edu/sites/
+Redirect 301 /sites-locations http://www.itcs.umich.edu/sites/labs/maps/
+
+Redirect 301 /student-jobs/telecom-device-maintenance-temp.php /student-jobs/
+Redirect 301 /student-jobs/internship.php /internship/
+Redirect 301 /student-voicemail/ https://www.itcom.itd.umich.edu/exchange/voicemail/guide-students.php
+Redirect 301 /student-voicemail https://www.itcom.itd.umich.edu/exchange/voicemail/guide-students.php
+Redirect 301 /student-voicemail-request/ https://www.itcom.itd.umich.edu/telephone/students/voicemail.php
+Redirect 301 /student-voicemail-request https://www.itcom.itd.umich.edu/telephone/students/voicemail.php
+
+#Redirect 301 /survivalguide/ http://itcs.umich.edu/survivalguide/
+#Redirect 301 /survivalguide http://itcs.umich.edu/survivalguide
+Redirect 301 /techrepair/ /tech-repair
+Redirect 301 /techrepair /tech-repair
+Redirect 301 /tools/index.php http://its.umich.edu/
+
+Redirect 301 /videoconferencing/index.html http://www.itcom.itd.umich.edu/videoconferencing/
+#Redirect 301 /videoconferencing http://www.itcom.itd.umich.edu/videoconferencing
+
+Redirect 301 /web-team-requests/ https://www.itcs.umich.edu/web-team-requests/
+Redirect 301 /web-team-requests https://www.itcs.umich.edu/web-team-requests
+
+Redirect 301 /wificalling/ http://itcom.itd.umich.edu/cellular/wifi-calling.php
+Redirect 301 /wificalling http://itcom.itd.umich.edu/cellular/wifi-calling.php
+Redirect 301 /wifi/ http://itcom.itd.umich.edu/wireless/
+Redirect 301 /wifi http://itcom.itd.umich.edu/wireless
+Redirect 301 /wifisetup/ /computing/wifi-network/wifi/getting-started
+Redirect 301 /wifisetup /computing/wifi-network/wifi/getting-started
+Redirect 301 /wifisetuptool/ https://www.itcom.itd.umich.edu/wireless/setup/
+Redirect 301 /wifisetuptool https://www.itcom.itd.umich.edu/wireless/setup
+Redirect 301 /wifiupgrade/ http://its.umich.edu/projects/wifi-upgrade/
+Redirect 301 /wifiupgrade http://its.umich.edu/projects/wifi-upgrade
+Redirect 301 /windows-forest/update.html http://itd.umich.edu/windows-forest/upgrade.php
+Redirect 301 /wireless/ http://itcom.itd.umich.edu/wireless/
+Redirect 301 /wireless http://itcom.itd.umich.edu/wireless
+Redirect 301 /wolv-access.php /wolverine-access.php
+Redirect 301 /miworkspace/hardware-inventory/index.html /miworkspace/for-unit-leadership/unit-hardware-inventory
+
+#added for wifi citizen contest 8/8/14
+#Redirect 301 /wificitizen/contest http://its.umich.edu/wificitizen
+#Redirect 301 /wificitizen /survivalguide/wificitizen
+#Redirect 301 /survivalguide/wificitizen/conest https://its.umich.edu/survivalguide/wificitizen/contest
+Redirect 301 /wificitizen https://drive.google.com/a/umich.edu/file/d/0B0BKRE3DeEPKb1RWc1BPSkljYUtJZjRGel9icmU3NklJRHRv/view
+
+#its-open-projects rename 10/19/2015
+Redirect 301 /about/ITS-Open-Projects.xls https://drive.google.com/a/umich.edu/file/d/0B_rVdFckkPRebDA3NmZIVjY0aWc/view?usp=sharing
+Redirect 301 /about/ITS-Open-Projects.xlsx https://drive.google.com/a/umich.edu/file/d/0B_rVdFckkPRebDA3NmZIVjY0aWc/view?usp=sharing
+
+#INC0827018 
+Redirect 301 /getconnected/popups http://www.itcs.umich.edu/getconnected/popups/
+
+Redirect 301 /computing/backup-storage/storage-comparisonbox /computing/backup-storage/storage-comparison
+
+#WiFi & Networks 20160927
+Redirect 301 /about/our-organization/csdc/project-managers /infrastructure/project-managers
+Redirect 301 /about/our-organization/infrastructure-project-managers /infrastructure/project-managers
+Redirect 301 /about/our-organization/infrastructure-forms /infrastructure/forms
+Redirect 301 /computing/wifi-network/vpn/faq /enterprise/wifi-networks/vpn/faq
+Redirect 301 /productivity/connectivity/vpn/getting-started /enterprise/wifi-networks/vpn/getting-started
+Redirect 301 /productivity/connectivity/vpn /enterprise/wifi-networks/vpn
+Redirect 301 /computing/wifi-network/vpn /enterprise/wifi-networks/vpn
+Redirect 301 /enterprise/networks /enterprise/wifi-networks
+Redirect 301 /computing/wifi-network/network-speed-testing/testing-network-connections /enterprise/wifi-networks/network-speed-testing/testing-network-connections
+Redirect 301 /computing/wifi-network/network-speed-testing/perfsonar /enterprise/wifi-networks/network-speed-testing/perfsonar
+Redirect 301 /computing/wifi-network/network-speed-testing /enterprise/wifi-networks/network-speed-testing
+Redirect 301 /computing/wifi-network/device-connection-guide /enterprise/wifi-networks/device-connection-guide
+Redirect 301 /computing/wifi-network/northwood-community-apartments /enterprise/wifi-networks/northwood-community-apartments
+Redirect 301 /computing/wifi-network/network-responsible-use-agreement /enterprise/wifi-networks/network-responsible-use-agreement
+Redirect 301 /computing/wifi-network/wifi/location-data-privacy-statement /enterprise/wifi-networks/wifi/location-data-privacy-statement
+Redirect 301 /computing/wifi-network/wifi/standards-security /enterprise/wifi-networks/wifi/standards-security
+Redirect 301 /computing/wifi-network/wifi/for-unit-it-professionals /enterprise/wifi-networks/wifi/for-unit-it-professionals
+Redirect 301 /computing/wifi-network/wifi/coverage-map /enterprise/wifi-networks/wifi/coverage-map
+Redirect 301 /computing/wifi-network/wifi/health-system-wifi /enterprise/wifi-networks/wifi/health-system-wifi
+Redirect 301 /computing/wifi-network/wifi/personal-routers /enterprise/wifi-networks/wifi/personal-routers
+Redirect 301 /computing/wifi-network/wifi/getting-started /enterprise/wifi-networks/wifi/getting-started
+Redirect 301 /computing/wifi-network/wifi /enterprise/wifi-networks/wifi
+Redirect 301 /accounts-access/uniqnames-passwords/two-factor-authentication/systems-that-require-duo-two-factor /accounts-access/uniqnames-passwords/two-factor-authentication/systems-that-require-duo
