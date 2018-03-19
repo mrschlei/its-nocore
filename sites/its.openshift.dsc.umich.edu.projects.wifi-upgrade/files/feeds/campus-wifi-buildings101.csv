@@ -1,0 +1,231 @@
+rank,name,group,status,details,lat,lng
+10010,Shapiro Undergraduate Library,Libraries,Completed,,42.27562,-83.737183
+10020,Hatcher Graduate Library,Libraries,Completed,,42.27626,-83.738197
+10030,Buhr Building (Library Space),Libraries,Completed,,42.270687,-83.746803
+20010,Palmer Commons,Public Facing Buildings,Completed,,42.280643,-83.73381
+20020,President's House,Public Facing Buildings,Completed,,42.275352,-83.7386084
+20030,Pierpont Commons,Public Facing Buildings,Completed,,42.291008,-83.717598
+20040,Rackham (Lobbies),Public Facing Buildings,Completed,,42.280834,-83.738289
+20050,Michigan League (Mendelssohn Ticketing Lobby),Public Facing Buildings,Completed,,42.279118,-83.737556
+20060,Michigan Union,Public Facing Buildings,Completed,,42.275135,-83.741516
+20070,Student Activities Building,Public Facing Buildings,Completed,,42.276561,-83.7425642
+20080,Alumni Center,Public Facing Buildings,Completed,,42.280109,-83.73774
+20090,Power Center for the Performing Arts (Lobbies),Public Facing Buildings,Completed,,42.280754,-83.735741
+20100,Health Services Building,Public Facing Buildings,Completed,,42.279739,-83.73671
+20110,Hill Auditorium (Lobbies),Public Facing Buildings,Completed,,42.279133,-83.739067
+20120,Michigan League,Public Facing Buildings,Completed,,42.279118,-83.737556
+20130,Ruthven & Exhibit Museums,Public Facing Buildings,Completed,,42.278183,-83.734337
+20140,Central Campus Recreation Building (CCRB),Public Facing Buildings,Completed,,42.278229,-83.732727
+20150,North Campus Recreation Building (NCRB),Public Facing Buildings,Completed,,42.295467,-83.7202
+20160,Bentley Historical Library,Public Facing Buildings,Completed,,42.289597,-83.712227
+20170,Rackham (Administrative Spaces),Public Facing Buildings,Completed,,42.280834,-83.738289
+20180,Rackham (Auditorium),Public Facing Buildings,Completed,,42.280834,-83.738289
+20190,Power Center for the Performing Arts (Auditorium),Public Facing Buildings,In Progress,,42.280754,-83.735741
+20200,Hill Auditorium (Auditorium),Public Facing Buildings,Funded,,42.279133,-83.739067
+20210,Department of Public Safety,Public Facing Buildings,In Progress,,42.2741512,-83.7477467
+20220,Towsley Center for Children,Public Facing Buildings,Funded,,42.273331,-83.733444
+20230,Matthaei Botanical Gardens,Public Facing Buildings,In Progress,,42.3026219,-83.6636613
+20240,Intramural Sports Building,Public Facing Buildings,Funded,,42.269409,-83.742264
+30010,Clements Library,Academic Spaces,Funded,,42.275447,-83.737989
+30020,Duderstadt Center/Media Union,Academic Spaces,Funded,,42.291126,-83.715759
+30030,U-M Museum of Art (UMMA) (Alumni Memorial Hall),Academic Spaces,Funded,,42.275417,-83.739906
+30040,Angell Hall (Auditoriums),Academic Spaces,Funded,,42.276752,-83.740044
+30050,Stamps Auditorium,Academic Spaces,Funded,,42.291946,-83.717514
+30060,Bonisteel Interdisciplinary Research Building (BIRB),Academic Spaces,Funded,,42.289906,-83.713524
+30070,Art & Architecture,Academic Spaces,Funded,,42.28931,-83.717194
+30080,South Quad,Academic Spaces,Funded,,42.273674,-83.742126
+30090,Cook Law Library,Academic Spaces,Funded,,42.273777,-83.739395
+30100,Undergraduate Science Building (USB),Academic Spaces,Funded,,42.279873,-83.73526
+30110,Mason Hall,Academic Spaces,Funded,,42.277206,-83.739265
+30120,Tappan Hall,Academic Spaces,Funded,,42.275436,-83.739296
+30130,School of Music (Moore Building),Academic Spaces,Funded,,42.290405,-83.721031
+30140,Modern Languages Building,Academic Spaces,Funded,,42.2798611,-83.739074
+30150,Stearns Frederick Building,Academic Spaces,Funded,,42.295469,-83.725998
+30160,Chemistry,Academic Spaces,Funded,,42.278072,-83.737099
+30170,Hutchins Hall,Academic Spaces,Funded,,42.273697,-83.740372
+30180,Gorguze Family Laboratory (Engineering Programs Building),Academic Spaces,Funded,,42.293308,-83.710831
+30190,CC Little,Academic Spaces,Funded,,42.2775,-83.735367
+30200,Dana Building (SNRE),Academic Spaces,Funded,,42.277317,-83.73658
+30210,Burton Memorial Tower,Academic Spaces,Funded,,42.279617,-83.738632
+30220,Chrysler Center (Continuing Engineering Education),Academic Spaces,Funded,,42.290764,-83.716728
+30230,School of Dentistry,Academic Spaces,Funded,,42.279022,-83.735947
+30240,H. H. Dow,Academic Spaces,Funded,,42.292946,-83.715416
+30250,G. G. Brown,Academic Spaces,Funded,,42.293102,-83.71386
+30260,"School of Public Health, Building II (Francis Thomas)",Academic Spaces,Funded,,42.280212,-83.72995
+30270,Walgreen Drama Center,Academic Spaces,Funded,,42.291946,-83.717514
+30280,Lurie Biomedical Engineering Building,Academic Spaces,Funded,,42.288906,-83.713593
+30290,Randall Lab,Academic Spaces,Funded,,42.276707,-83.736809
+30300,College of Pharmacy,Academic Spaces,Funded,,42.277184,-83.734933
+30310,Cooley Lab,Academic Spaces,Funded,,42.290611,-83.713684
+30320,Lorch Hall,Academic Spaces,Funded,,42.273682,-83.737289
+30330,Weill Hall,Academic Spaces,Funded,,42.272404,-83.740326
+30340,School of Education,Academic Spaces,Funded,,42.273888,-83.736084
+30350,School of Nursing,Academic Spaces,Funded,,42.284229,-83.737503
+30360,School of Kinesiology,Academic Spaces,Funded,,42.280164,-83.730651
+30370,"School of Public Health, Building I (Vaughan Henry Frieze)",Academic Spaces,Funded,,42.280884,-83.730667
+30380,School of Social Work,Academic Spaces,Funded,,42.274616,-83.736229
+30390,North Quad,Academic Spaces,Funded,,42.280746,-83.740135
+30400,Dance Building,Academic Spaces,Funded,,42.277744,-83.73246
+30410,Revelli Hall,Academic Spaces,Funded,,42.2692653,-83.7446973
+30420,Kresge Business Administration Library,Academic Spaces,Funded,,42.272887,-83.736867
+30430,Dennison Building,Academic Spaces,Funded,,42.27673,-83.735092
+30440,Computer Executive Education Building,Academic Spaces,Funded,,,
+30450,Francois-Xavier Bagnoud,Academic Spaces,Funded,,42.293556,-83.712021
+30460,Kraus Natural Science,Academic Spaces,Funded,,42.27808,-83.738976
+30470,Industrial & Operations Engineering,Academic Spaces,Funded,,42.29108,-83.713768
+30480,Electrical Engineering & Computer Science (EECS),Academic Spaces,Funded,,42.292374,-83.713974
+30490,Engineering Research Building 2,Academic Spaces,Funded,,42.289562,-83.7151643
+30500,Naval Architecture & Marine Engineering,Academic Spaces,Funded,,42.293072,-83.709198
+30510,East Hall,Academic Spaces,Funded,,42.275784,-83.735199
+30520,Environment & Water Resources Engineering (EWRE),Academic Spaces,Funded,,42.292778,-83.713417
+30530,Space Research Building (SRB),Academic Spaces,Funded,,42.29438,-83.711624
+30540,Gerstacker Building,Academic Spaces,Funded,,42.289612,-83.71447
+30550,Law School Academic Building (South Hall),Academic Spaces,Funded,,42.273022,-83.7400568
+30560,Angell Hall/Tisch Hall,Academic Spaces,Funded,,42.276752,-83.740044
+30570,Thayer Academic Building,Academic Spaces,Funded,,42.280083,-83.7399713
+30580,Ross School of Business,Academic Spaces,Funded,,42.272381,-83.737602
+30590,Lay Automotive Lab,Academic Spaces,Funded,,42.291851,-83.713989
+30600,Computer Science & Engineering (Beyster),Academic Spaces,Funded,,42.2930138,-83.716372
+30610,West Hall/School of Information,Academic Spaces,Funded,,42.275806,-83.736244
+30620,Phoenix Memorial Laboratory,Academic Spaces,Funded,,42.2911265,-83.7146543
+30630,Engineering Research Building 1,Academic Spaces,Funded,,42.2895016,-83.7148893
+30640,Haven Hall,Academic Spaces,Funded,,42.276348,-83.73922
+30650,"College of Literature, Science, and the Arts (LSA)",Academic Spaces,Funded,,42.276203,-83.741257
+30660,Lane Hall,Academic Spaces,Funded,,42.279926,-83.741249
+30670,Wyly Hall,Academic Spaces,Funded,,42.2723837,-83.7361247
+30680,Kelsey Museum of Archeology (Newberry Hall),Academic Spaces,Funded,,42.276768,-83.741158
+30690,School of Information North,Academic Spaces,Funded,,42.288952,-83.714493
+30700,Lurie Engineering Center,Academic Spaces,Funded,,42.291485,-83.713791
+30710,Ross Executive Learning and Conference Center Executive Residence,Academic Spaces,Funded,,42.2727064,-83.7360934
+30720,U-M Transportation Research Testing Building,Academic Spaces,Funded,,,
+30730,Life Sciences Institute,Academic Spaces,Funded,,42.27969,-83.734154
+30740,U-M Transportation Research Institute (UMTRI),Academic Spaces,Funded,,42.298073,-83.703163
+30750,Health Management Research,Academic Spaces,Funded,,42.281576,-83.736434
+30760,Hamilton Square,Academic Spaces,Funded,,42.278915,-83.74002
+30770,Carver Building,Academic Spaces,Funded,,42.279255,-83.742905
+30780,Perry Building (ICPSR),Academic Spaces,Funded,,42.274563,-83.745354
+30790,Institute for Social Research (ISR),Academic Spaces,Funded,,42.276669,-83.743683
+30800,Detroit Observatory,Academic Spaces,Funded,,42.281982,-83.731674
+30810,Northwood Community Center,Academic Spaces,Funded,,42.297318,-83.709084
+30820,Henderson House,Academic Spaces,Funded,,42.2718629,-83.7318063
+30830,Helen Newberry,Academic Spaces,Funded,,42.276928,-83.7416
+30840,Alice Lloyd,Academic Spaces,Funded,,42.281261,-83.731773
+30850,Baits II - Thieme House,Academic Spaces,Funded,,42.293755,-83.723396
+30860,Bursley Hall,Academic Spaces,Funded,,42.29377,-83.720947
+30870,Couzens Hall,Academic Spaces,Funded,,42.281967,-83.732903
+30880,Oxford Houses - Seeley,Academic Spaces,Funded,,42.274738,-83.725258
+30890,Fletcher Hall,Academic Spaces,Funded,,42.27018,-83.742767
+30900,Baits II - Coman House,Academic Spaces,Funded,,42.293755,-83.723396
+30910,Oxford Houses - Vandenberg,Academic Spaces,Funded,,42.274738,-83.725258
+30920,Oxford Houses - Noble,Academic Spaces,Funded,,42.274738,-83.725258
+30930,Stockwell Hall,Academic Spaces,Funded,,42.278728,-83.731537
+30940,Martha Cook,Academic Spaces,Funded,,42.27449,-83.737984
+30950,Mary Markley,Academic Spaces,Funded,,42.280876,-83.728874
+30960,Cram Place Community Center,Academic Spaces,Funded,,,
+30970,Oxford Houses - Goddard,Academic Spaces,Funded,,42.274738,-83.725258
+30980,Oxford Houses - Cheever,Academic Spaces,Funded,,42.274738,-83.725258
+30990,Oxford Houses - Geddes,Academic Spaces,Funded,,42.274738,-83.725258
+31000,Oxford Houses - Emanuel,Academic Spaces,Funded,,42.274738,-83.725258
+31010,Betsy Barbour,Academic Spaces,Funded,,42.2772595,-83.7415517
+31020,Baits II - Cross House,Academic Spaces,Funded,,42.293755,-83.723396
+31030,Mosher-Jordan Hall,Academic Spaces,Funded,,42.280006,-83.731407
+31040,Cook John P Building,Academic Spaces,Funded,,,
+31050,Baits II - Conger House,Academic Spaces,Funded,,42.293755,-83.723396
+31060,Lawyers Club,Academic Spaces,Funded,,42.274372,-83.740143
+31070,Baits II - Ziwet House,Academic Spaces,Funded,,42.293755,-83.723396
+31080,Community Dentistry,Academic Spaces,Funded,,,
+31090,777 N University,Academic Spaces,Funded,,42.278835,-83.739807
+31100,Liberty Center (520 E. Liberty),Academic Spaces,Funded,,42.2792155,-83.7423067
+31110,North Ingalls Building,Academic Spaces,Funded,,42.283573,-83.737747
+31120,Center for the Education of Women (Michigan Square),Academic Spaces,Funded,,42.279175,-83.745171
+31120,Michigan Square,Academic Spaces,Funded,,42.279175,-83.745171
+31130,McKinley Towne Centre,Academic Spaces,Funded,,42.279991,-83.742447
+31140,625 E Liberty (Graham Institute),Academic Spaces,Funded,,42.2794742,-83.7410584
+31150,Student Publications Building,Academic Spaces,Funded,,42.277081,-83.742287
+31160,214 S State,Academic Spaces,Funded,,42.279675,-83.741058
+31170,Pellston Biological,Academic Spaces,Funded,,,
+31180,Wallace House,Academic Spaces,Funded,,42.2746009,-83.7267825
+31190,Ford Nuclear Reactor,Academic Spaces,Funded,,,
+31200,Aerospace Engineering Lab Pumping Station,Academic Spaces,Funded,,,
+31210,Aerospace Engineering Power Plant,Academic Spaces,Funded,,,
+31220,306 S State,Academic Spaces,Funded,,42.2790522,-83.7409798
+31230,Aerospace Engineering Wind Tunnel Lab,Academic Spaces,Funded,,42.293732,-83.710861
+31240,Radiation Sciences Laboratory 2,Academic Spaces,Funded,,,
+31250,Radiation Sciences Laboratory 1,Academic Spaces,Funded,,,
+31260,Aerospace Engineering Lab Propulsion Lab,Academic Spaces,Funded,,,
+31270,Aerospace Engineering Lab Plasma Research,Academic Spaces,Funded,,,
+31280,East Quad,Academic Spaces,Funded,,42.272861,-83.735153
+31290,Oxford Houses - Plant Services,Academic Spaces,Funded,,42.274738,-83.725258
+31300,"Northwood I, II & III",Academic Spaces,Funded,,42.296494,-83.713913
+31310,North Campus Housing Service Building,Academic Spaces,Funded,,42.298412,-83.695877
+31320,Stephen M. Ross Academic Center,Academic Spaces,Funded,,42.268539,-83.740891
+31330,Argus II,Academic Spaces,Funded,,42.277792,-83.755424
+31340,305 W Liberty (Taubman College Liberty Research Annex),Academic Spaces,Funded,,42.2791836,-83.7517165
+31350,Auxiliary Services Building 1,Academic Spaces,Funded,,42.2994129,-83.6940086
+31360,Argus I,Academic Spaces,Funded,,42.2774288,-83.7543198
+31370,Michigan News Building,Academic Spaces,Funded,,42.2774083,-83.74224
+31380,Hoover Annex,Academic Spaces,Funded,,,
+31390,1032 Greene Street,Academic Spaces,Funded,,42.268242,-83.747842
+31400,523 S Division,Academic Spaces,Funded,,42.275555,-83.744087
+31410,LSA Administration Annex,Academic Spaces,Funded,,42.2815889,-83.736804
+31420,Burnham House,Academic Spaces,Funded,,42.2806013,-83.7269205
+31430,Madison Building,Academic Spaces,Funded,,42.274368,-83.747902
+31440,Varsity Drive Building (Food Stores),Academic Spaces,Funded,,42.236446,-83.728073
+31450,One North Main,Academic Spaces,Funded,,42.281696,-83.74894
+31460,Galleria Building,Academic Spaces,Funded,,42.274712,-83.733887
+31470,Arbor Lakes 1,Academic Spaces,Funded,,42.3105692,-83.6758447
+31480,South State Commons II,Academic Spaces,Funded,,42.2485027,-83.7368677
+31490,1580 Ellsworth Road,Academic Spaces,Funded,,42.229327,-83.721622
+31500,Physical Properties Building,Academic Spaces,Funded,,42.269276,-83.746353
+31510,Wolverine Tower,Academic Spaces,Funded,,42.243259,-83.737129
+31520,Administrative Services Building,Academic Spaces,Funded,,42.269131,-83.747147
+31530,Fleming Administration Building,Academic Spaces,Funded,,42.275871,-83.74276
+31540,Institute of Continuing Legal Education (ICLE),Academic Spaces,Funded,,42.268543,-83.748016
+31550,Weidenbach Hall,Academic Spaces,Funded,,42.269314,-83.740852
+31560,Arbor Lakes 3,Academic Spaces,Funded,,42.311073,-83.6762792
+31570,Arbor Lakes 2,Academic Spaces,Funded,,42.3112634,-83.6755013
+31580,Hartwig Administration Building,Academic Spaces,Funded,,42.26897,-83.74086
+31590,555 S Forest,Academic Spaces,Funded,,42.275192,-83.732819
+31600,Boyer Building,Academic Spaces,Funded,,42.269733,-83.74704
+31610,Facilities Services Building A,Academic Spaces,Funded,,42.2684888,-83.7462848
+31620,715 E Huron,Academic Spaces,Funded,,42.281431,-83.740163
+31630,717 E Huron,Academic Spaces,Funded,,42.2812087,-83.7400601
+31640,North Campus Facilities Services Building,Academic Spaces,Funded,,42.292175,-83.707619
+31650,Facilities Services Building B,Academic Spaces,Funded,,42.2673256,-83.7459952
+31660,North Campus Ground Services Facility,Academic Spaces,Funded,,,
+31670,Madelon Pound Building (Ginsberg Center),Academic Spaces,Funded,,42.271797,-83.736053
+31680,Facilities Services Building C,Academic Spaces,Funded,,42.2678576,-83.7456787
+31690,Trotter House,Academic Spaces,Funded,,42.274548,-83.72979
+31700,Sports Coliseum,Academic Spaces,Funded,,42.27206,-83.745934
+31710,Auxiliary Services Building 2,Academic Spaces,Funded,,,
+31720,Transportation Services,Academic Spaces,Funded,,42.266418,-83.744766
+31730,North Campus Support Facility,Academic Spaces,Funded,,42.298428,-83.701668
+31740,Schembechler Hall,Academic Spaces,Funded,,42.266113,-83.741142
+31750,Engineering Research Support Building,Academic Spaces,Funded,,,
+31760,Lurie Tower,Academic Spaces,Funded,,42.2920083,-83.7162864
+31770,Fire Serv Instr Res Center,Academic Spaces,Funded,,,
+31780,North Campus Chiller Plant,Academic Spaces,Funded,,,
+31790,Central Power Plant,Academic Spaces,Funded,,42.280862,-83.7346897
+31800,North Campus Service Building I,Academic Spaces,Funded,,42.296772,-83.697792
+31810,Church Street Parking Structure,Academic Spaces,Funded,,42.2759033,-83.7341882
+31820,Plant Service Building,Academic Spaces,Funded,,,
+31840,Thayer Street Parking Structure,Academic Spaces,Funded,,42.2797193,-83.7399554
+31850,Glen Avenue Parking Structure,Academic Spaces,Funded,,42.2836397,-83.7364872
+31860,Catherine Street Parking Structure,Academic Spaces,Funded,,42.282916,-83.734783
+31870,Simpson Circle Parking Structure,Academic Spaces,Funded,,42.28196,-83.729195
+31880,Thompson Street Parking Structure,Academic Spaces,Funded,,42.2755321,-83.7436604
+31890,Forest Avenue Parking Structure,Academic Spaces,Funded,,42.274067,-83.73365
+31900,Ann Street Parking Structure,Academic Spaces,Funded,,42.2825448,-83.7347482
+31910,North Campus Grounds Storage Building #1,Academic Spaces,Funded,,,
+31920,Hill Street Parking Structure,Academic Spaces,Funded,,42.2723284,-83.7366885
+31930,Fletcher Street Parking Structure,Academic Spaces,Funded,,42.280222,-83.73602
+31940,Palmer Drive Parking Structure,Academic Spaces,Funded,,42.2802541,-83.7338498
+31950,North Campus Switch Station,Academic Spaces,Funded,,,
+31960,North Campus Ground Services Facility Annex,Academic Spaces,Funded,,,
+31970,North Campus Grounds Garage 1,Academic Spaces,Funded,,,
+31980,Plant Storage Building #1,Academic Spaces,Funded,,,
+31990,Plant Storage Building #2,Academic Spaces,Funded,,,
+32000,Plant Storage Building #3,Academic Spaces,Funded,,,
+32010,Central Campus Recreation Building Storage Facility,Academic Spaces,Funded,,,
+32020,Hoover Ave Heating Plant,Academic Spaces,Funded,,,
+32030,1021 E Huron Building,Academic Spaces,Funded,,42.281583,-83.736188

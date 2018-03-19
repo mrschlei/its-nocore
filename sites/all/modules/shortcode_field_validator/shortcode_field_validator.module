@@ -1,0 +1,138 @@
+<?php
+/**
+ * @file
+ * Code for the UL meeting content type feature.
+ */
+
+function shortcode_field_validator_form_alter(&$form, &$form_state, $form_id) {
+	
+  if ($form_id == 'new_account_application_node_form') {
+	
+	$form["field_department_shortcode"]["und"][0]["value"]["#element_validate"][] = 'shortcode_field_validator_form_new_account_application_node_form_alter';
+	//echo "<pre>";var_dump($form["field_department_shortcode"]["und"][0]["value"]["#element_validate"]);echo "</pre>";
+	
+	global $user;
+	//only set this field to the logged in user's uniqname if we're NOT on the admin form
+	if(!path_is_admin(current_path())) {
+		$form["field_email"]["und"][0]["value"]["#default_value"] = $_SERVER['REMOTE_USER'];
+	}
+	//https://drupal.org/node/154137
+	$form['actions']['submit']['#value'] = t('Submit'); // Change the text on the label element
+  }
+}
+
+
+
+/**
+ * FAPI validation of an individual number element.
+ */
+function shortcode_field_validator_form_new_account_application_node_form_alter($element, &$form_state) {
+  //if (field_widget_field($element, $form_state)) {$field = field_widget_field($element, $form_state);}
+  //if (field_widget_instance($element, $form_state)) {$instance = field_widget_instance($element, $form_state);}
+ if (isset($element['#value'])) {
+  $instance = field_widget_instance($element, $form_state);
+	if (isset($element['#value'])) {
+		$value = $element['#value'];
+		$shortcode = $value;
+		if (!is_numeric($value)) {
+			$message = t('Only integers are allowed in %field.', array('%field' => $instance['label']));
+			form_error($element, $message);
+		}
+		else if (strlen($value) !== 6) {
+			$message = t('%field must contain six integers (e.g. 870590).', array('%field' => $instance['label']));
+			form_error($element, $message);
+		}
+		else {
+			require_once "DB.php";
+
+			$username = "RMTITSWEB_DWPROD1";
+			$password = "x5Bg7p4e";
+			$hostspec = "(DESCRIPTION=
+   			(SOURCE_ROUTE=yes)
+   			(ADDRESS_LIST=
+     			(FAILOVER=on)
+     			(LOAD_BALANCE=on)
+     			(ADDRESS=(PROTOCOL=tcp)(HOST=oraconnp1.dsc.umich.edu)(PORT=30421))
+     			(ADDRESS=(PROTOCOL=tcp)(HOST=oraconnp2.dsc.umich.edu)(port=30421)))
+   				(ADDRESS=(PROTOCOL=tcp)(HOST=prd2-scan.dsc.umich.edu)(PORT=1521))
+   			(CONNECT_DATA=(SERVICE_NAME=rmt_dw_dwprod)))";
+
+			$db = DB::connect("oci8://$username:$password@$hostspec");
+			if (DB::isError($db)) {
+				echo "<h2>Error</h2><p>Could not connect to the database.  Please contact the <a href='http://its.umich.edu/help'>ITS Service Center</a>.</p>";
+				echo "<!--".$db->getMessage()."-->";
+			}
+			else {
+				$query = "select 
+				cnv.SHORTCODE, 
+				cnv.SHORTCODE_DESCR50, 
+				cnv.SHORTCODE_STATUS, 
+				cnv.SHORTCODE_STATUS_DESCRSHORT, 
+				cnv.FUND_CODE, 
+				cnv.DEPTID, 
+				cnv.CLASS, 
+				cnv.PYRLL_TRANS_UNALLW_IND, 
+				cls.CLASS_DESCR,
+				fnd.DEPT_DESCR,
+				fund.FUND_DESCR,
+				cnv.PROJECT_GRANT,
+				cnv.PROGRAM_CODE,
+				prog.PROGRAM_DESCR,
+				cnv.PYRLL_TRANS_UNALLW_IND,
+				cnv.CLASS2,
+				clstwo.CLASS_DESCR,
+				ev.EVERIFY_SIGNATURE_DT,
+				cnv.ACCOUNT,
+				acc.ACCOUNT_DESCR,
+				ev.PROJECT_GRANT_TITLE
+				FROM 
+				m_gldw1.CNVCHARTFD cnv, 
+				m_gldw1.CURR_CLASS_CF_VW cls, 
+				m_gldw1.CURR_FN_DEPT_VW fnd, 
+				m_gldw1.CURR_FUND_VW fund, 
+				m_gldw1.CURR_PROGRAM_VW prog, 
+				m_gldw1.CURR_CLASS_CF_VW clstwo, 
+				m_gldw1.CURR_PROJECT_GRANT_VW ev,
+				m_gldw1.CURR_ACCOUNT_VW acc
+				WHERE 
+				cnv.CLASS = cls.CLASS
+				AND cnv.CLASS2 = clstwo.CLASS
+				AND cnv.ACCOUNT = acc.ACCOUNT
+				AND cnv.PROJECT_GRANT = ev.PROJECT_GRANT
+				AND cnv.DEPTID = fnd.DEPTID
+				AND cnv.FUND_CODE = fund.FUND_CODE
+				AND cnv.PROGRAM_CODE = prog.PROGRAM_CODE
+				AND SHORTCODE = '".$shortcode."'";
+					$result = $db->getAssoc($query);
+					
+					if (count($result) >= 1) {
+					
+					foreach ($result as $unk) {
+						//var_dump($unk);
+						if ($unk[2] == "Terminated") {
+							$message = t($unk[2].' shortcode in %field.', array('%field' => $instance['label']));
+							//watchdog("Valid shortcode: ".$shortcode, array(), WATCHDOG_DEBUG);
+							form_error($element, $message);
+						}
+						//apparently, Payroll Transactions Unallowable are alright?
+						elseif ($unk[6] == "Y"){ 
+							$message = t('Payroll Transactions Unallowable for shortcode in %field.', array('%field' => $instance['label']));
+							form_error($element, $message);
+						}						
+						else {
+							watchdog($unk[2]." shortcode: ".$shortcode, array(), WATCHDOG_DEBUG);
+						}
+						
+						
+	}
+	}//end result count > 0 check
+	else {
+			$message = t('Invalid shortcode in %field.', array('%field' => $instance['label']));
+			form_error($element, $message);
+	}			
+			
+			}
+		}
+	}
+}
+}

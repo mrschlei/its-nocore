@@ -1,0 +1,170 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+//_removethislineandtheunderscorebeforeit
+function ip_redirect_init() {
+	//drupal_set_message("<h2>Using a Windows Computer?</h2><p>Software (e.g. Microsoft Word, Adobe Photoshop) has moved from the Start Menu to the <a href='http://google.com'>Apps Anywhere</a> portal.</p>");
+  // Since this file should only be loaded on the front page, it cannot be
+  // declared in the info file.
+  
+  $usersip = $_SERVER['REMOTE_ADDR'];
+  
+  if (drupal_is_front_page()) {
+    //if (ip_in_range($usersip,"141.211.112.34-38")) {drupal_set_message("<p>".$usersip." might be in Munger Cyber?</p>");}
+if (ip_in_range($usersip,"67.194.182.128/27")) {drupal_set_message("<p>".$usersip." might be in Alice Lloyd?</p>");}
+else if (ip_in_range($usersip,"67.194.181.0/24")) {drupal_set_message("<p>".$usersip." might be in Angell Hall Courtyard?</p>");}
+else if (ip_in_range($usersip,"67.194.182.0/26")) {drupal_set_message("<p>".$usersip." might be in Angell Hall Classroom A?</p>");}
+else if (ip_in_range($usersip,"67.194.190.192/26")) {drupal_set_message("<p>".$usersip." might be in Angell Hall Classroom B?</p>");}
+else if (ip_in_range($usersip,"67.194.191.0/26")) {drupal_set_message("<p>".$usersip." might be in Angell Hall Classroom C?</p>");}
+else if (ip_in_range($usersip,"67.194.182.96/27")) {drupal_set_message("<p>".$usersip." might be in Replaced?</p>");}
+else if (ip_in_range($usersip,"67.194.180.144/28")) {drupal_set_message("<p>".$usersip." might be in saa?</p>");}
+else if (ip_in_range($usersip,"67.194.188.128/27")) {drupal_set_message("<p>".$usersip." might be in Architecture?</p>");}
+else if (ip_in_range($usersip,"67.194.188.72/29")) {drupal_set_message("<p>".$usersip." might be in Art?</p>");}
+else if (ip_in_range($usersip,"67.194.188.80/29")) {drupal_set_message("<p>".$usersip." might be in Art Rm. 2030?</p>");}
+else if (ip_in_range($usersip,"67.194.189.72/29")) {drupal_set_message("<p>".$usersip." might be in bahna1040?</p>");}
+else if (ip_in_range($usersip,"67.194.188.160/27")) {drupal_set_message("<p>".$usersip." might be in Baits II (Coman)?</p>");}
+else if (ip_in_range($usersip,"67.194.187.48/29")) {drupal_set_message("<p>".$usersip." might be in Buhr?</p>");}
+else if (ip_in_range($usersip,"67.194.188.224/28")) {drupal_set_message("<p>".$usersip." might be in Bursley Lobby?</p>");}
+else if (ip_in_range($usersip,"67.194.188.192/27")) {drupal_set_message("<p>".$usersip." might be in Bursley?</p>");}
+else if (ip_in_range($usersip,"67.194.188.96/27")) {drupal_set_message("<p>".$usersip." might be in Bursley CLC?</p>");}
+else if (ip_in_range($usersip,"67.194.187.56/29")) {drupal_set_message("<p>".$usersip." might be in canham1203?</p>");}
+else if (ip_in_range($usersip,"67.194.184.160/27")) {drupal_set_message("<p>".$usersip." might be in Science Learning Center (SLC) Classroom?</p>");}
+else if (ip_in_range($usersip,"67.194.184.0/26")) {drupal_set_message("<p>".$usersip." might be in Science Learning Center (SLC)?</p>");}
+else if (ip_in_range($usersip,"67.194.185.32/27")) {drupal_set_message("<p>".$usersip." might be in Pharmacy Student Lounge?</p>");}
+else if (ip_in_range($usersip,"67.194.185.192/26")) {drupal_set_message("<p>".$usersip." might be in Pharmacy Classroom?</p>");}
+else if (ip_in_range($usersip,"67.194.183.128/27")) {drupal_set_message("<p>".$usersip." might be in Couzens?</p>");}
+else if (ip_in_range($usersip,"67.194.180.192/27")) {drupal_set_message("<p>".$usersip." might be in School of Natural Resources & Environment 'Commons'?</p>");}
+else if (ip_in_range($usersip,"67.194.180.224/27")) {drupal_set_message("<p>".$usersip." might be in School of Natural Resources & Environment Classroom?</p>");}
+else if (ip_in_range($usersip,"67.194.190.0/28")) {drupal_set_message("<p>".$usersip." might be in DC 2450?</p>");}
+else if (ip_in_range($usersip,"67.194.189.96/29")) {drupal_set_message("<p>".$usersip." might be in DC Basement?</p>");}
+else if (ip_in_range($usersip,"67.194.189.224/28")) {drupal_set_message("<p>".$usersip." might be in Duderstadt Cyber?</p>");}
+else if (ip_in_range($usersip,"67.194.189.88/29")) {drupal_set_message("<p>".$usersip." might be in Duderstadt Ergopod?</p>");}
+else if (ip_in_range($usersip,"67.194.189.240/28")) {drupal_set_message("<p>".$usersip." might be in DC Stacks?</p>");}
+else if (ip_in_range($usersip,"67.194.189.208/28")) {drupal_set_message("<p>".$usersip." might be in DC 2450b?</p>");}
+else if (ip_in_range($usersip,"67.194.188.240/28")) {drupal_set_message("<p>".$usersip." might be in SM 3239?</p>");}
+else if (ip_in_range($usersip,"67.194.189.0/28")) {drupal_set_message("<p>".$usersip." might be in School of Music?</p>");}
+else if (ip_in_range($usersip,"67.194.178.208/29")) {drupal_set_message("<p>".$usersip." might be in Psych Cyber?</p>");}
+else if (ip_in_range($usersip,"67.194.180.64/26")) {drupal_set_message("<p>".$usersip." might be in East Quad?</p>");}
+else if (ip_in_range($usersip,"67.194.190.48/29")) {drupal_set_message("<p>".$usersip." might be in Field Hockey Clubhouse?</p>");}
+else if (ip_in_range($usersip,"67.194.187.0/28")) {drupal_set_message("<p>".$usersip." might be in Fletcher?</p>");}
+else if (ip_in_range($usersip,"67.194.186.192/26")) {drupal_set_message("<p>".$usersip." might be in Ford School?</p>");}
+else if (ip_in_range($usersip,"67.194.187.72/29")) {drupal_set_message("<p>".$usersip." might be in Ford School Cyberstations?</p>");}
+else if (ip_in_range($usersip,"67.194.187.80/29")) {drupal_set_message("<p>".$usersip." might be in Ford School Podium Stations?</p>");}
+else if (ip_in_range($usersip,"67.194.178.160/28")) {drupal_set_message("<p>".$usersip." might be in GlibN4?</p>");}
+else if (ip_in_range($usersip,"67.194.178.176/29")) {drupal_set_message("<p>".$usersip." might be in GlibNLobby?</p>");}
+else if (ip_in_range($usersip,"67.194.179.248/29")) {drupal_set_message("<p>".$usersip." might be in GlibN106?</p>");}
+else if (ip_in_range($usersip,"67.194.180.0/26")) {drupal_set_message("<p>".$usersip." might be in GlibN2?</p>");}
+else if (ip_in_range($usersip,"67.194.179.240/29")) {drupal_set_message("<p>".$usersip." might be in GlibSLobby?</p>");}
+else if (ip_in_range($usersip,"67.194.179.224/28")) {drupal_set_message("<p>".$usersip." might be in Microfilm Reading Room?</p>");}
+else if (ip_in_range($usersip,"67.194.190.96/27")) {drupal_set_message("<p>".$usersip." might be in Clark Library - 2nd floor South?</p>");}
+else if (ip_in_range($usersip,"67.194.180.160/28")) {drupal_set_message("<p>".$usersip." might be in Political Science?</p>");}
+else if (ip_in_range($usersip,"67.194.190.64/29")) {drupal_set_message("<p>".$usersip." might be in henderson?</p>");}
+else if (ip_in_range($usersip,"67.194.187.88/29")) {drupal_set_message("<p>".$usersip." might be in Law School Lab?</p>");}
+else if (ip_in_range($usersip,"67.194.182.160/28")) {drupal_set_message("<p>".$usersip." might be in Kinesiology CCRB?</p>");}
+else if (ip_in_range($usersip,"67.194.182.192/28")) {drupal_set_message("<p>".$usersip." might be in Kinesiology Observatory Lodge?</p>");}
+else if (ip_in_range($usersip,"67.194.189.64/29")) {drupal_set_message("<p>".$usersip." might be in lokencenter?</p>");}
+else if (ip_in_range($usersip,"67.194.178.200/29")) {drupal_set_message("<p>".$usersip." might be in Econ Student Lounge?</p>");}
+else if (ip_in_range($usersip,"67.194.178.192/29")) {drupal_set_message("<p>".$usersip." might be in Linguistics?</p>");}
+else if (ip_in_range($usersip,"67.194.180.128/28")) {drupal_set_message("<p>".$usersip." might be in Martha Cook?</p>");}
+else if (ip_in_range($usersip,"67.194.183.160/27")) {drupal_set_message("<p>".$usersip." might be in Mary Markley?</p>");}
+else if (ip_in_range($usersip,"67.194.188.88/29")) {drupal_set_message("<p>".$usersip." might be in Mary Markley CLC?</p>");}
+else if (ip_in_range($usersip,"67.194.180.176/29")) {drupal_set_message("<p>".$usersip." might be in Honors Program Office?</p>");}
+else if (ip_in_range($usersip,"67.194.184.192/27")) {drupal_set_message("<p>".$usersip." might be in Michigan League?</p>");}
+else if (ip_in_range($usersip,"67.194.185.0/29")) {drupal_set_message("<p>".$usersip." might be in Beansters?</p>");}
+else if (ip_in_range($usersip,"67.194.186.0/25")) {drupal_set_message("<p>".$usersip." might be in Union?</p>");}
+else if (ip_in_range($usersip,"67.194.187.16/28")) {drupal_set_message("<p>".$usersip." might be in Union First Floor?</p>");}
+else if (ip_in_range($usersip,"67.194.187.64/29")) {drupal_set_message("<p>".$usersip." might be in SORC?</p>");}
+else if (ip_in_range($usersip,"67.194.185.160/27")) {drupal_set_message("<p>".$usersip." might be in Union Tap Room?</p>");}
+else if (ip_in_range($usersip,"67.194.183.192/27")) {drupal_set_message("<p>".$usersip." might be in Mosher Jordan?</p>");}
+else if (ip_in_range($usersip,"67.194.188.48/28")) {drupal_set_message("<p>".$usersip." might be in Munger CLC?</p>");}
+else if (ip_in_range($usersip,"67.194.188.32/28")) {drupal_set_message("<p>".$usersip." might be in Munger Cyber?</p>");}
+else if (ip_in_range($usersip,"67.194.187.32/28")) {drupal_set_message("<p>".$usersip." might be in Newberry?</p>");}
+else if (ip_in_range($usersip,"67.194.184.224/27")) {drupal_set_message("<p>".$usersip." might be in School of Nursing (NIB)?</p>");}
+else if (ip_in_range($usersip,"67.194.182.176/28")) {drupal_set_message("<p>".$usersip." might be in Communication Studies?</p>");}
+else if (ip_in_range($usersip,"67.194.184.128/27")) {drupal_set_message("<p>".$usersip." might be in North Quad CLC?</p>");}
+else if (ip_in_range($usersip,"67.194.180.184/29")) {drupal_set_message("<p>".$usersip." might be in Language Resource Center?</p>");}
+else if (ip_in_range($usersip,"67.194.190.24/29")) {drupal_set_message("<p>".$usersip." might be in Northwood 3 2150?</p>");}
+else if (ip_in_range($usersip,"67.194.190.32/29")) {drupal_set_message("<p>".$usersip." might be in 1588 Cram Circle?</p>");}
+else if (ip_in_range($usersip,"67.194.188.64/29")) {drupal_set_message("<p>".$usersip." might be in Northwood Community Center?</p>");}
+else if (ip_in_range($usersip,"67.194.182.208/28")) {drupal_set_message("<p>".$usersip." might be in Oxford?</p>");}
+else if (ip_in_range($usersip,"67.194.185.96/27")) {drupal_set_message("<p>".$usersip." might be in Palmer Cyber?</p>");}
+else if (ip_in_range($usersip,"67.194.185.64/27")) {drupal_set_message("<p>".$usersip." might be in Palmer Commons?</p>");}
+else if (ip_in_range($usersip,"67.194.189.48/28")) {drupal_set_message("<p>".$usersip." might be in Pierpont Showcase?</p>");}
+else if (ip_in_range($usersip,"67.194.189.16/28")) {drupal_set_message("<p>".$usersip." might be in Pierpont Lower?</p>");}
+else if (ip_in_range($usersip,"67.194.189.32/28")) {drupal_set_message("<p>".$usersip." might be in Pierpont Upper?</p>");}
+else if (ip_in_range($usersip,"67.194.182.224/28")) {drupal_set_message("<p>".$usersip." might be in CSCAR?</p>");}
+else if (ip_in_range($usersip,"67.194.188.16/28")) {drupal_set_message("<p>".$usersip." might be in Athletic Center 106?</p>");}
+else if (ip_in_range($usersip,"67.194.187.128/25")) {drupal_set_message("<p>".$usersip." might be in Athletic Center?</p>");}
+else if (ip_in_range($usersip,"67.194.187.96/28")) {drupal_set_message("<p>".$usersip." might be in Athletic Center 110?</p>");}
+else if (ip_in_range($usersip,"67.194.187.112/28")) {drupal_set_message("<p>".$usersip." might be in Athletic Center First Floor?</p>");}
+else if (ip_in_range($usersip,"67.194.189.80/29")) {drupal_set_message("<p>".$usersip." might be in Ruthven 2500?</p>");}
+else if (ip_in_range($usersip,"67.194.184.64/26")) {drupal_set_message("<p>".$usersip." might be in Caident?</p>");}
+else if (ip_in_range($usersip,"67.194.185.8/29")) {drupal_set_message("<p>".$usersip." might be in Dent Com?</p>");}
+else if (ip_in_range($usersip,"67.194.185.16/28")) {drupal_set_message("<p>".$usersip." might be in Caident Cyber?</p>");}
+else if (ip_in_range($usersip,"67.194.178.128/28")) {drupal_set_message("<p>".$usersip." might be in Brandon Center?</p>");}
+else if (ip_in_range($usersip,"67.194.178.32/27")) {drupal_set_message("<p>".$usersip." might be in seb2232?</p>");}
+else if (ip_in_range($usersip,"67.194.178.0/27")) {drupal_set_message("<p>".$usersip." might be in seb2303?</p>");}
+else if (ip_in_range($usersip,"67.194.183.0/25")) {drupal_set_message("<p>".$usersip." might be in SPH?</p>");}
+else if (ip_in_range($usersip,"67.194.178.64/27")) {drupal_set_message("<p>".$usersip." might be in SSW?</p>");}
+else if (ip_in_range($usersip,"67.194.178.144/28")) {drupal_set_message("<p>".$usersip." might be in SSW Cyber?</p>");}
+else if (ip_in_range($usersip,"67.194.179.64/26")) {drupal_set_message("<p>".$usersip." might be in Shapiro 1000?</p>");}
+else if (ip_in_range($usersip,"67.194.179.0/26")) {drupal_set_message("<p>".$usersip." might be in DIAD?</p>");}
+else if (ip_in_range($usersip,"67.194.178.96/27")) {drupal_set_message("<p>".$usersip." might be in ATCS (Knox Center)?</p>");}
+else if (ip_in_range($usersip,"67.194.190.128/27")) {drupal_set_message("<p>".$usersip." might be in Shapiro 4059 - ULIC?</p>");}
+else if (ip_in_range($usersip,"67.194.178.216/29")) {drupal_set_message("<p>".$usersip." might be in Shapiro 2002?</p>");}
+else if (ip_in_range($usersip,"67.194.179.192/27")) {drupal_set_message("<p>".$usersip." might be in Shapiro 3000?</p>");}
+else if (ip_in_range($usersip,"67.194.178.184/29")) {drupal_set_message("<p>".$usersip." might be in Shapiro 4000?</p>");}
+else if (ip_in_range($usersip,"67.194.179.128/26")) {drupal_set_message("<p>".$usersip." might be in Shapiro Undergraduate Library?</p>");}
+else if (ip_in_range($usersip,"67.194.186.128/26")) {drupal_set_message("<p>".$usersip." might be in South Quad?</p>");}
+else if (ip_in_range($usersip,"67.194.183.224/27")) {drupal_set_message("<p>".$usersip." might be in Stockwell?</p>");}
+else if (ip_in_range($usersip,"67.194.189.112/28")) {drupal_set_message("<p>".$usersip." might be in Tap 260?</p>");}
+else if (ip_in_range($usersip,"67.194.182.240/28")) {drupal_set_message("<p>".$usersip." might be in Trotter House?</p>");}
+else if (ip_in_range($usersip,"67.194.185.128/27")) {drupal_set_message("<p>".$usersip." might be in SLC Satellite Lab?</p>");}
+else if (ip_in_range($usersip,"67.194.190.56/29")) {drupal_set_message("<p>".$usersip." might be in Varsity Tennis Center?</p>");}
+else if (ip_in_range($usersip,"67.194.189.128/26")) {drupal_set_message("<p>".$usersip." might be in West Quad?</p>");}
+else if (ip_in_range($usersip,"67.194.189.104/29")) {drupal_set_message("<p>".$usersip." might be in West Quad G042?</p>");}
+else if (ip_in_range($usersip,"67.194.190.40/29")) {drupal_set_message("<p>".$usersip." might be in Women's Gymnastic Center?</p>");}
+else if (ip_in_range($usersip,"67.194.188.0/28")) {drupal_set_message("<p>".$usersip." might be in East Quad Annex?</p>");}
+
+
+	
+	else {drupal_set_message("<strong>".$usersip."</strong> is not in a known Sites IP range.", 'warning');
+		//drupal_set_message("Check caching here...",'error');
+	}
+  }
+  //else {echo "<p>ooooooooooooooh.</p>";}
+}
+
+
+
+/**
+ * Check if a given ip is in a network
+ * @param  string $ip    IP to check in IPV4 format eg. 127.0.0.1
+ * @param  string $range IP/CIDR netmask eg. 127.0.0.0/24, also 127.0.0.1 is accepted and /32 assumed
+ * @return boolean true if the ip is in this range / false if not.
+ */
+
+
+
+function ip_in_range($ip, $cidr) {
+		
+	//break range into starter ip (ex: 207.75.152.154) and end digits of end IP (159) 
+	//$range = explode("-", $cidr);
+	$range = explode("/", $cidr);
+	$start = $range[0];
+	//echo "<p>Start: ".ip2long($start)."</p>";
+	$end = explode(".", $range[0]);
+	$end[3] = $range[1];
+	$end = implode(".",$end);
+	//echo "<p>End: ".ip2long($end)."</p>";	
+    
+	//list($subnet, $mask) = explode('/', $cidr);
+
+    if (ip2long($ip) >= ip2long($start) && ip2long($ip) <= ip2long($end))
+    { 
+        return true;
+    }
+	else {return false;}
+}

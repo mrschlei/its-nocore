@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the just expandable text feature.
+ */
+
+include_once 'just_expandable_text.features.inc';

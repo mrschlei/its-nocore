@@ -1,0 +1,5 @@
+; $Id: dmca_updater.info,v 1.1 2012/10 19:57:41 mrschlei Exp $
+name = IP Redirector
+description = Redirect the /sites/home front page based on IP address, dammit.
+core = 7.x
+files[] = ip_redirect.module

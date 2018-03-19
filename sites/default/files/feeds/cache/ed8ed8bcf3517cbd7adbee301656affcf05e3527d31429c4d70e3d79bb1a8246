@@ -1,0 +1,188 @@
+Name,"Work Description","Work Status","Effort Percent Complete","Actual/Schedule Finish","Manager Assessment","Execution Project Manager",Customer,"Service Portfolio Owner/ Exec Sponsor"
+"HCM - Health Care Reform","To track ADAC approved Health Care Reform intiiatives and effort. Work for regulatory mandates or University mandates to stay in compliance with Health Care Reform legislation. An example of this is the effort mandated by the Employer Shared Responsibility (ESR) Act.",S,97,03/26/2018,Green,"Yoas,Scot M","Human Resources","Behm,Jim"
+"HCM - Health System Scheduling & Time Attendance","This project's objectives are to establish standard work processes for efficient scheduling and timekeeping. Project scope includes process improvement, leveraging existing technology where possible and separating out the Scheduling component.",S,89,01/31/2019,Green,"Yoas,Scot M","U-M Health System","Behm,Jim"
+"Campus Wide WiFi Upgrade","The purpose of this project is to replace and/or enhance the Ann Arbor campus (excluding the Medical Campus) WiFi network so that there is a consistent, reliable, robust, and higher capacity WiFi network in university buildings. The project will upgrade a minimum of 15 million square feet of academic, student housing, and administrative buildings. ",S,99,08/03/2018,Green,"Williamson,Leslie","All Units","Palms,Andrew T"
+"BYOD Core Capabilities","This project is part of the Bring Your Own Device (BYOD) program. The BYOD trend on campus has been increasing and presents opportunities and challenges that need to be addressed in order to meet the evolving technology needs of faculty, staff and students. This project focuses on increasing faculty, staff, and student productivity by Enabling and optimizing core applications, such as printing and access to U-M storage, on personal devices.",S,85,10/03/2018,Green,"Marker,Paul","All Units","Jones II,Robert Douglas"
+"RAS: PM - Award Management","automate the management of Research Project Awards, allowing multiple sponsored projects and other research records to be associated with one or more Award.",,47,09/28/2018,Yellow,"Palmby,Brian","OVP Research","Behm,Jim"
+"TL - CPM CTools Proj Sites Migration","Determine existing solutions for the future of Project Sites & Grad Tools outside of CTools. Migrate users off of the current CTools Project Sites into new existing solutions and make Project Sites Read Only.",S,89,12/24/2018,Green,"Crouch,Catherine M","All Units","Demonner,Sean Michael"
+"FIN - UMHS - EDI Implementation","UMHS is looking to re-implement their EDI solution.  An RFP was conducted and upon conclusion GHX was the clear winner, however a formal award was never made.  An accelerated re-evaluation will take place from 11/2-12/1 to determine the preferred vendor.   It is estimated that this is a 9 month project at this time.",,81,03/30/2018,Green,"Palmby,Brian","U-M Health System","Behm,Jim"
+"EIAM: Account Lifecycle Optimization (ALO)","While many EIAM program efforts are laying the foundation for bigger things to come, the Account Lifecycle Optimization project is focused on identifying the university’s current pain points with IAM-related processes and tools—and improving them wherever possible!
+
+Improvement initiatives are rolling out in waves and will conclude in January 2018. The number of waves will be determined, in part, by input provided by campus and Michigan Medicine partners.
+
+For more information about this project and the EIAM Program, visit http://cio.umich.edu/eiam-program.",,84,05/31/2018,Green,"King,Earnest",ITS,"Bermann,Sol"
+"FIN - Let UHS use Inventory module","University Health Services (UHS) is interested in utilizing the Peoplesoft inventory module.  This project has two key initiatives.  The first effort is to de-couple the inventory module so that it is not exclusive to UMHS.  The second portion is to enable UHS within the system.",,68,02/07/2018,Red,"Skelding,Brian","U-M Health System","Behm,Jim"
+"RunMyJobs Implementation","Objective:  Implement a Unicenter replacement using the strategy identified as part of the planning project.
+
+To Implement the RunMyJobs scheduling tool and setup all jobs necessary for the support of the in scope EAS systems on RunMyJobs with the intent to retire Unicenter once all identified systems have been successfully running on the new tool. The in scope EAS systems include: ID Card (M-Card), M-Reports, System Security, Cache Scripts, Maintenance Scripts, Portal Sync, Imaging, Data Warehouse, and M-Pathways CS, HCM & FIN systems. ",,73,05/30/2018,Yellow,"Burch,Jennifer",ITS,"Behm,Jim"
+"EIAM: Enterprise Identity & Access Mgmt Program","Launched in January 2017, the Enterprise Identity Access Management (EIAM) program at U-M coordinates and unites IAM efforts for all U-M campuses - Ann Arbor, Dearborn, Flint, and Michigan Medicine - to improve the technology and administrative processes that allow authorized individuals to access U-M resources. The initiative is jointly funded by the Office of the Provost and Michigan Medicine through the end of June 2018.
+
+By summer 2018 and through multiple projects, the EIAM Program will: 
+* Lay the foundation to set universitywide IAM priorities with a single program office and steering committee.
+* Prepare for future improvements by piloting new services and identifying universitywide requirements.
+* Deliver quick wins to improve the current state for the entire U-M community.
+
+For more information, visit the program's website at http://cio.umich.edu/eiam-program",,64,06/29/2018,Yellow,"Sytch,Svetla",ITS,"Bermann,Sol"
+"FY1712: Next Gen Security Architecture PH1 & PH2","The cyber threat to research universities has become increasingly sophisticated and more active. U-M will adopt a new strategy and this request funds the technologies to implement that strategy. This is a combination of advanced detection and protection technology. It will cover U-M as a whole while focusing on enclaves with sensitive information. Key deliverables for phase 1 are:
+1) Next Gen Firewall (NGFW) with integrated Threat Intelligence Services
+2) Security Information & Event Management (SIEM) Upgrade
+3) Peakflow Replacement - Netflow Analysis Tool (NFAT).",,58,04/12/2018,Green,"Stathes,Gregory",ITS,"Bermann,Sol"
+"FIN-UMHS VMI - Inventory","UMHS has received approval to move forward with their Value Margin Initiative (VMI) for Supply Chain Processes.  Three items related to this multifaceted effort involve technology components.  Deliverables for this effort are closely tied to the FIN 9.2 upgrade. The 9.2 steering committee has reviewed and approved the effort to run in parallel with this project.",,59,08/17/2018,Green,"Little,Cristine Lynn","U-M Health System","Behm,Jim"
+"RAS: XProd - Data Normalization","This project is across all eRAS Click Projects.  This effort will standardize some of the tables and population of the tables.  Scope includes: Key matching (OIDS),  Person Table, Org/Dept Table, Sponsor Table.  This will correct some inconsistencies, and provide the foundation for better integrated reporting, and other integrations in general (like MIDAR)",,41,01/17/2019,Green,"Cooper,Camille B",ITS,"Behm,Jim"
+"IT Bicentennial Project","This project is based off of the Bicentennial Grant Program request and is in support of the U-M Bicentennial work for 2017.  
+
+The primary goal of the project is to foster an appreciation and deeper understanding of how technology was pioneered and shaped at U-M by researchers, students, faculty, and staff. The project will explore and contribute to the Bicentennial theme of Creating & Inventing.
+
+Additionally, the project will: 
+Create a sense of community by inviting those with firsthand experience creating, inventing, and using technology to share their story.
+Recall memories, shaping a sense of nostalgia for alumni and retirees. 
+Cultivate a sense of inclusion and pride in U-M technology.
+Educate the next generation about the influence U-M has had on the global technological landscape and inspire future homegrown innovations.
+",,95,02/27/2018,Green,"Iverson,Joel","All Units","Curley,Cathy"
+"RAS: Click (Vendor) 8.0 Upgrade","Click (Vendor) 8.0 Upgrade - this new version will be release Oct. 31 2016 - AM, PM, CM, and RM will need to make this upgrade throughout CYl 2017.  All products are already two dot release behind the vendor, it will need to do this one to stay in a vendor supported version.  This will provide a lot of nice features out of the box the users have been waiting for, as well as features that could be implemented that users have also been waiting for.  It is also the minimum required version for MIDAR.",,96,02/16/2018,Green,"Locey,Mary",ITS,"Behm,Jim"
+"Upgrade Pinnacle to v6.7","Upgrade Pinnacle system from 6.4.3 to 6.7.2 to maintain vendor support and to provide enhancements/fixes for CSDC business processing.",,50,06/29/2018,Green,"Sager,Martin",ITS,"Palms,Andrew T"
+"EIAM: Role & Access Management Project (RAMP)","Access to U-M resources today is most often managed on a service-by-service basis rather than a specific job or role, e.g., Payroll Clerk. The Role and Access Management Project (RAMP) will focus on establishing a role-based access service at the university to accelerate start-up time for new employees, replace manual processes, improve data security, and more. 
+
+The RAMP effort will first select a vendor to support a role-based service, then pilot the service with several U-M systems. This and future efforts will help establish the necessary foundational roles at U-M.
+
+For more information about this project and the EIAM Program, visit http://cio.umich.edu/eiam-program.",,42,06/29/2018,Yellow,"Swaney,Jennifer",ITS,"Bermann,Sol"
+"EIAM: Uniqname Re-evaluation & Recommendation","The university’s current uniqname ecosystem has served us for over a quarter of a century. But with an eight-character limit and a desire to include parts of an individual's name, it’s often a challenge to find  combinations for common names. Changing uniqnames due to a life event,  such as marriage or divorce, is also a manual and time-consuming process. Compounding these challenges is the university’s ever growing population.
+
+The Uniqname Re-evaluation & Recommendation project will conduct a thorough assessment of the current state and recommend a shared solution to implement university-wide. Cross-campus partners will contribute input throughout.
+
+For more information about this project and the EIAM Program, visit http://cio.umich.edu/eiam-program.",,95,01/31/2018,Green,"Sytch,Svetla",ITS,"Bermann,Sol"
+"EIAM: Identity Assurance","Today, a patchwork of uncoordinated policies and procedures guide the university in verifying an individual’s identity, the key to accessing university resources. The resulting gaps in security, compliance, documentation, and responsibility leave the university vulnerable to cyberattacks, fraud, or legal sanctions.  
+
+The Identity Assurance initiative will assess the current state, address immediate vulnerabilities whenever possible, and recommend first steps to implement National Institute of Standards and Technology (NIST) Identity Assurance Levels (IALs) across the university.
+
+For more information about this project and the EIAM Program, visit http://cio.umich.edu/eiam-program.",,82,03/28/2018,Green,"Brannon,Eric",ITS,"Bermann,Sol"
+"EIAM: Access Standards Alignment Project (ASAP)","We will categorize our data and applications based on level of sensitivity. For example, applications that are generally open to the public require no or minimal access credentials, such as www.umich.edu. Applications that contain sensitive data, such as SSN, require 2 levels of credentials such as uniqname and password. Other applications with highly sensitive data, such as research animal location, require even more levels of credentials, such as 2 levels of login and a token.",,21,06/29/2018,Yellow,"Stathes,Gregory",ITS,"Bermann,Sol"
+"PeopleSoft Campus Solutions 9.2 Upgrade","Oracle’s extended support for U-M’s current installation of Campus Solutions (CS) 9.0 will end on December 31, 2019. CS provides core functionality for the business processes of Recruiting and Admissions, Student Registration, Student Records, Curriculum, Academic Advising, Financial Aid, Student Financials, and Campus Community (core student and employee data). U-M must upgrade to a version of CS that will be supported for the foreseeable future, in order to maintain business continuity for the primary customers of CS, and to remain compliant and secure in our enterprise systems.",,46,07/30/2018,Green,"Tuttle,Ann","Academic Affairs","Behm,Jim"
+"Electronic Signature Implementation","Implement a central electronic signature solution for campus.",,60,10/18/2018,Green,"Sabourin,Robert",ITS,"Palms,Andrew T"
+"RAS: AM - AAALAC Improvements Pt2","AAALAC Continous Improvements Pt2- Until U of M is off of probation with AAALAC there will be a constant need to make system changes/improvements.  Even if U of M is off of probation there will be items needed to keep us off probation that are recommended by AAALAC  The scope of this will be determined based on continual feedback from AAALAC and consultants that have be hired by the Animail Care and Use Office (ACUO formally UCUCA).  This project is Compliance related.",,39,12/24/2018,Green,"Cooper,Camille B",ITS,"Behm,Jim"
+"UM.Lessons Retirement","Migrate users off of Lessons application and decommission service.",,56,04/30/2018,Green,"Crouch,Catherine M","All Units","Demonner,Sean Michael"
+"HCM - Elastic Search Implementation","With PeopleTools 8.55, Oracle has delivered the replacement for their SES search engine.  The replacement is Elastic Search.  SES will be obsolete in 17 months, and we (EAS) will need to switch over to the new search engine.  Also, with the CS 9.2 upgrade, they will need to go live with Elastic Search, so having the HCM product up and running will benefit that project.",,71,01/25/2018,Yellow,"Miller,Brian L",ITS,"Behm,Jim"
+"HCM - Performance Management Pilot","Planning and execution of performance management software for approx 1000 users.",,62,10/30/2018,Red,"Eglinton,Natalie","U-M Health System","Behm,Jim"
+"ITS Systems Data Center Relocation","ITS Systems Data Center Relocation project is focused on preparing for and moving ITS systems out of the Michigan Academic Computing Center (MACC) to support the delivery of an additional 1 MW of power to ARC-TS by reducing ITS physical footprint and power consumption at the MACC data center.",,28,12/24/2018,Red,"Castle,Jeffrey J",ITS,"Palms,Andrew T"
+"Kartograafr v2.0","The TL - ArcGIS Canvas Integration project completed in June, 2016 provides a limited set of operations to link Canvas with the Esri mapping system for student submission of assignments completed in Esri, and managed in Canvas.   One of the functions now performed on ArcGIS system moves student assignments into a separate, instructor controlled folder region where they can be graded by the instructor.  As currently implemented, the system leaves the student without a copy of their work, and it still requires a good deal of manual intervention by the instructor for every assignment to be graded.  A true copy operation could not be completed in the original implementation because of limitations of the REST API package used, and time constraints.  
+
+The objective of this enhancement is to implement a true recursive copy operation, which will provide the instructor with a full working copy of the student's assignment, leaving the student with their original copy intact.  This update will also migrate away from the Esri/ago-tools API, which is no longer being supported by the vendor.  The Esri/ArcREST API will be used instead.  ",,85,01/23/2018,Green,"Haines,David L","College of Literature Science and Arts","Demonner,Sean Michael"
+"Develop CUI Compliance Strategy","Develop a controlled unclassified information (CUI) compliance strategy. Develop in partnership with University of Michigan Office of Research (UMOR), Michigan Medicine Compliance, Office of General Counsel (OGC), and Information Assurance a compliance program to support the university’s CUI compliance through the delivery of policy, process, security templates and training. Develop a CUI Public Cloud Strategy, and proof of concept, that maps out the technical and financial requirements including architecture, performance, roles and responsibilities, workflows, IT security controls, and costs. Includes collaboration with the implementation of Yottabyte Research Cloud (YBRC) for CUI Compliance and associated systems. ",,51,04/30/2018,Red,"Meister,Michael","no Customer found!!!","Palms,Andrew T"
+"RAS: RM - HRPP Regulatory Changes","To be in compliance with regulatory rule changes that must be implemented on January 19, 2018,  the Regulatory Management system must be updated. The changes focus on types of exemptions and needs for continuing review.",,69,03/01/2018,Green,"Locey,Mary","OVP Research","Behm,Jim"
+"Cloud Expansion","M Cloud currently only supports enablement of Amazon AWS which includes:
+- Access to Enterprise agreement (includes egress waiver)
+- Optional shortcode billing
+- Training opportunities and limited consulting
+- Current Audience: Faculty, Staff and Students
+
+
+Future Service Description/Scope:
+
+M Cloud Azure v1 will target enable and integration of -
+Microsoft Azure which includes:
+- Access Provisioning and shortcode billing
+- Azure AuthD/AuthZ (shibboleth integration for authentication), 
+- Security guardrails for accounts that house HIPAA data
+- Initial Network Range Configuration with Optional VPN
+- Current Audience: Faculty, Staff and Students? Alumni?NO
+
+
+M Cloud GCP v1 will target enablement of Google Cloud Platform which includes:
+- Enterprise agreement 
+ Is there a process for Onboarding “projects” to EA if so we will want to do “project” creation 
+- Add script to only enable project creation for 
+Optional Shortcode Billing
+- VPN included (revisit if it becomes larger issue, or talk to campus
+Current Audience: Faculty, Staff and Students? Alumni?
+
+
+M Cloud AWS v2 will target campus integrations which adds the following features to the current offering:
+- Security best practices
+- Shibboleth integration for account management 
+- Reporting: reports listing AMIs, public IPs, EC2 inventory, average spend, EC2 status checks, IIA security concerns, -
+- VPN Connection report, etc.
+- DNS Recommendations 
+- Network/VPC setup with optional VPN
+- Security log retention through splunk
+- Linux/Windows Managed AMI’s
+",,97,01/23/2018,Green,"Chapman,Mandie M","All Units","Palms,Andrew T"
+"HCM - AFSCME Contract Changes 2017","AFSCME contract changes have impacted leave , payroll, and benefits areas",,53,02/12/2018,Green,"Yoas,Scot M","Human Resources","Behm,Jim"
+"Bighouse [Flux Replacement / HPC]","High Performance Computing (HPC). Described as a simulation infrastructure for data center systems. ",,0,01/24/2019,Red,"Burch,Jennifer",ITS,"Palen,Brock Edward"
+"Big Data Platform Expansion","Cavium is providing U-M with a hadoop cluster. A Hadoop cluster is a special type of computational cluster designed specifically for storing and analyzing huge amounts of unstructured data in a distributed computing environment. This project covers the installation of the hardware, connectivity and power, and the installation of hadoop. ",,0,08/30/2018,Yellow,"Burch,Jennifer",ITS,"Palen,Brock Edward"
+"LAADS - Learning Analytics Infrastructure","The purpose of this project is to build a unified data source for SIS, LMS, and Caliper learning tools data. The Learning Analytics Infrastructure project is one of the key strategic initiatives the Teaching & Learning team will be investing in for FY18. The effort will entail working with the Unizin consortium to define and implement a cloud-based learning analytics platform. That platform will include the 3 main components: 
+
+1) Unizin Data Warehouse (UDW)
+2) Learning Records Store (LRS)
+3) Visualization Service
+
+This platform will provide the capabilities needed to support learning analytics dashboards, academic performance alerts/monitoring, and surface actionable insights for faculty and program coordinators. This platform also provides the foundation for us to support technology-facilitated personalized and adaptive learning as those trend evolve.
+
+",,46,06/29/2018,Green,"Johnston,John P","All Units","Demonner,Sean Michael"
+"PrivaScope Pilot","PrivaScope: Pilot project to implement the infrastructure service that will provide secure enclave for U-M research of  location and other infrastructure data.
+",,42,06/26/2018,Green,"Thomas,Katarina Kt","All Units","Palms,Andrew T"
+"Yottabyte Research Cloud (YBRC)","Increasingly, research projects need computational analysis environments capable of accommodating data with proprietary, confidentiality, or regulatory constraints. This proposal outlines a scalable system for creation of virtualized secure compute analysis environments for customized collaborative research with data storage, computational resources (including HPC), and analysis capabilities, all connected by software-defined secure networks. The environments will be configurable (and reconfigurable) via software, for quick and easy provisioning and customization.
+",,0,05/24/2018,Red,"Burch,Jennifer",ITS,"Palen,Brock Edward"
+"Vulnerability Management Reengineering","Current tool’s central management system will reach end of life in March of 2018; new system and/or covering functionality required before end of life of current tool.
+Will need to integrate new functionality with IA’s current vulnerability scanning processes (including Michigan Medicine’s processes/approach). 
+
+The objectives for this project include to: 
+- Define system requirements
+- Integrate Michigan Medicine requirements/staff
+- Determine if purchasing third party tool OR developing internal fix (including automation) is better option
+- Implement chosen option prior to current system end of life date
+- Understand capabilities to best integrate with other workflow tools (potentially including ServiceNow) for HITS and ITS implementations
+- Integrate with SIEM (Splunk ES)
+- Implement new servers/hardware and retire currently used servers/hardware
+
+Additional information is available in the reviewed and approved Project Charge: 
+(https://docs.google.com/document/d/1jYchxUFRB8or-x-GF2kkt9ahBcgaHnGG73LIPzQxGiw/edit?ts=59711900#).",,13,06/29/2018,Green,"Stathes,Gregory",ITS,"Bermann,Sol"
+"FIN - PSTools upgrade 8.55","Upgrade the Financial System to the current release to remain in vendor support.",,30,03/02/2018,Green,"Sharma,Ravi",ITS,"Behm,Jim"
+"Web Platform Service","ITS Infrastructure proposes that we revamp our web hosting offerings to provide a scalable, centralized, user-friendly web platform service for faculty, staff, and students with high levels of security, quality, and performance. We propose that we develop a strong cloud-based presence for most web content and applications. We also need to explore options to best handle sensitive data (e.g., PCI, ITAR, FERPA, etc.). Our goal is to shift hosting platform services to the cloud to obtain the best possible value for the university.",,29,06/15/2018,Green,"Marker,Paul",ITS,"Palms,Andrew T"
+"ProjectPlace Implementation","Implement a second phase of the ProjectPlace implementation as a result of purchasing Team member Plus from Planview. This use case would allow the PMO to offer an easier to use project management tool to accidental project managers as well as provide a way for managers to manage their teams day to day work. A streamlined work collaboration tool would allow multiple teams to collaborate across projects to finish projects quickly. ",,54,03/30/2018,Green,"Murray,Jennifer",ITS,"Jones,Diane"
+"Develop system continuity plans","This initiative will identify and classify ITS critical core infrastructure systems, and re-architect these systems to be highly available and resilient. The goal is for systems to able to maintain their capacity and production workloads, even in the event of small-scale faults or a large-scale disaster. We will develop options to increase the resiliency of these systems and propose improvements under the guidance of ITS senior leadership after weighing the scope, risk, and costs of the alternatives.",,26,06/08/2018,Green,"Bennett,Michael",ITS,"Palms,Andrew T"
+"Uniqname Resilience","This project is part of the Systems Resilience & Disaster Avoidance Initiative. ITS maintains a set of four servers leveraged to automate the provisioning of uniqnames and AFS space to U-M staff and students. Two of the servers, Woodshed and Fear, are maintained by IAM Operations and the remaining two, Surprise and Ruthless, are supported by Storage Operations. The fragility and criticality of these servers necessitates urgent replacement.
+
+The purpose of this project is to replace the four servers with new hardware and new code to:
+
+- Replace current functionality with code that compatible with contemporary hardware and OS
+- Extend existing systems to assume some automation responsibility from the existing servers
+- Enable high-available configuration across multiple data centers.",,38,02/28/2018,Yellow,"Castle,Jeffrey J",ITS,"Palms,Andrew T"
+"Develop Michigan IT Staff Development Program","Develop a new program to provide professional and skill development for all 2700 Michigan IT professionals.",,9,10/24/2018,Green,"Allen,Mashon","All Units","Curley,Cathy"
+"FIN - Supplier Portal - Vendor Onboarding","The University will implement the delivered Peoplesoft Supplier Portal in order to automate vendor onboarding as well as capture required supporting elements.",,63,02/28/2018,Green,"Skelding,Brian",ITS,"Behm,Jim"
+"FIN - Sponsored Programs Award Enhancement","ERPM is implementing a new Award module in CY2018.  This project is needed In order to link the ERPM and FIN data.",,72,02/12/2018,Green,"Rose,Holly A",ITS,"Behm,Jim"
+"Finance Data Mart","Enable the Finance Analytics team to provide actionable business intelligence to their leadership and offices they support, but providing a finance data mart that will incorporate business rules and alleviate manual manipulation of data.  Part of this effort may also result in enhancements to the existing UM Data Warehouse to improve operational reporting; or to the online PeopleSoft system to capture missing data elements.  ",,16,06/26/2018,Yellow,"Palmby,Brian","OAVP Finance","Thiruvengadam,Vijayaraja"
+"MReports SSRS Server 2008R2 to 2017 Upgrade","The current SSRS server used for MReports is 2008R2. It is the lowest version currently supported by Microsoft, thus can be rendered unsupported anytime. Also, a straight migration path is available for now so we should take advantage of it before it is gone. The update will also provide advanced functionalities like downloading to .xlsx format and may help in the better performance of the reports.",,0,05/25/2018,Green,"Sheppard,Michael Jonathan",ITS,"Thiruvengadam,Vijayaraja"
+"DB Security Hardening, Password Strength, Vaults","In the past two years DBA team, as a part of Database Security Hardening project: 
+- Deployed as proof-of-concept several Oracle security products, in particular key vault and audit vault,
+- Implemented encryption for majority of critical databases hosting PPI or other sensitive information,
+- Explored possibilities for deploying stronger passwords for ITS hosted databases, as well as mandatory password expiration.
+
+The next step in the hardening database security is to:
+- Productionize key vault and audit vault by working closely with the vendor (Oracle) to resolve current operational and general functionality issues these products have
+- Deploy strong password policies for new and changed Oracle passwords",,5,06/29/2018,Green,"Thomas,Katarina Kt",ITS,"Palms,Andrew T"
+"TIER Campus Success Grouper Project","For approximately 20 years the University of Michigan has provided its users with the ability to create
+and manage groups, which are used for a wide variety of purposes. The University currently manages
+85,000 groups through its enterprise MCommunity directory. After such a long period of time, and
+especially given the current social climate of increased sensitivity to information privacy, we find it
+necessary to reevaluate the best way of providing group management capabilities to our users.
+Ultimately, we would like to provide our users with a rich set of groups, created using dynamic,
+automated processes, which can securely authorize access to applications, enable email delivery, etc.
+A primary project goal is to determine the best methodology for providing these services using Grouper.
+Furthermore, a pilot to manage groups used for emergency alerts and notifications presents an exciting
+opportunity to fully evaluate the Grouper product in support of a vital University service.",,22,10/29/2018,Green,"Lahann,Aimee",ITS,"Bermann,Sol"
+"Virtual Data Center","Design and build a “Virtual Data Center” containing a set of core technical capabilities inside AWS. These capabilities are seen as prerequisites for migrating ITS systems and services to AWS and will be available to systems and services that operate within this Virtual Data Center.",,72,02/09/2018,Green,"Meister,Michael",ITS,"Palms,Andrew T"
+"PMO Reporting Implementation","With the recent move of Planview’s backend environment to SQL Server, new reporting is needed.  Business Objects support and access was deprecated in November 2017.  Implementation and configuration of Planview’s reporting suite and limited custom development of replacement reports is required in order to maintain the existing service levels to customers.
+This project will identify target audiences, identify an initial minimum set of required reports for each audience, and develop a limited set of custom reports.",,50,01/30/2018,Green,"Solomon,Demetrius",ITS,"Jones,Diane"
+"DART ESB - Integration Layer Project","The DART team and its sponsors agree that a sound, sustainable, expandable, reusable data exchange hub to allow system of record data to be seamlessly exchanged with other systems is a long term strategy need as DART continues to evolve to meet the fundraising needs of the University.
+
+In addition, a critical part of the ITS strategy to utilize cloud solutions requires integration tools that allow efficient data exchange between applications. Currently, ITS does not have the message queue or publish-subscribe tools this proposal satisfies.
+
+The launch of DART in 2012 has largely satisfied the needs of the University fundraising business function. However, significant gaps remain. Additionally, other areas of the University that utilize alumni and donor data require specialized functionality not inherent in a fundraising system.
+
+With the gaps noted above, the need for data integration is imminent.  The DART team spent the better part of 1 ½ years building a data integration with Alumni Association’s Salesforce implementation. While the integration was built in a way that exchange of the minimum data components, significant problems are occurring due to its inefficient architecture. Current state problems are:
+-Files are constructed in a fractured csv format, which is difficult to expand upon as data exchange needs grow.
+-The increase in data scope along with the 2-way exchange resulted in several stress points and bottlenecks imposed on AAUM staff and introduced performance challenges for Salesforce.
+-The creation of multiple files requires an exorbitant amount of manual staff time to process and is not sustainable.
+-The current integration only serves data exchange between DART and Salesforce, and is not structured to be available for other systems data exchange. -Additional requests for data exchange are coming in from the College of Engineering and the Ross Business School, to name a few. The pent up demand for this information causes units to find less efficient methods for pulling data that lead to data stagnation and inaccuracies. This poses a risk to alumni and donor satisfaction when the university appears to be uncoordinated in its efforts
+",,5,11/30/2018,Green,"Jacobson,Kimberly",ITS,"Behm,Jim"
+"Cloud Decision Framework and Application Roadmap","This project will fulfill an important need in ITS, which is to assist service owners and service managers in identifying a cloud adoption strategy and a tactical migration plan for their applications. The project will also provide ITS executive leadership with a master cloud migration roadmap that includes timelines, captures application interdependencies, risks, and budget requirements.",,3,04/30/2018,Green,"Little,Cristine Lynn",ITS,"Palms,Andrew T"
