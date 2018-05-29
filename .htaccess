@@ -3,8 +3,13 @@
 #
 
 # Protect files and directories from prying eyes.
-<FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\..*|Entries.*|Repository|Root|Tag|Template)$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig\.save)$">
-  Order allow,deny
+<FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock))$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig\.save)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+  </IfModule>
 </FilesMatch>
 
 # Don't show directory listings for URLs which map to a directory.
@@ -115,6 +120,21 @@ DirectoryIndex index.php index.html index.htm
  RewriteRule (.*) https://backstage.its.umich.edu/dei/ [L,R]
 
  RewriteCond %{HTTPS} off
+ RewriteRule ^get-started/onboard https://its.umich.edu/projects/e-signature/get-started/onboard [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^computing/virtualization-cloud/amazon-web-services/rates https://its.umich.edu/computing/virtualization-cloud/amazon-web-services/rates [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^computing/virtualization-cloud/google-cloud/rates https://its.umich.edu/computing/virtualization-cloud/google-cloud/rates [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^user-registration-report https://its.umich.edu/projects/e-signature/user-registration-report [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^computing/computers-software/campus-computing-sites/help https://its.umich.edu/computing/computers-software/campus-computing-sites/help [L,R=301]
+
+ RewriteCond %{HTTPS} off
  RewriteRule ^communication/television-video/mivideo/request https://its.umich.edu/communication/television-video/mivideo/request [L,R=301]
 
  RewriteCond %{HTTPS} off
@@ -134,6 +154,9 @@ DirectoryIndex index.php index.html index.htm
 
  RewriteCond %{HTTPS} off
  RewriteRule ^news/human-resource-management-system-oracle-upgrade https://its.umich.edu/news/human-resource-management-system-oracle-upgrade [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^computing/email-calendar/mail-relay-form https://its.umich.edu/computing/email-calendar/mail-relay-form [L,R=301]
 
  RewriteCond %{HTTPS} off
  RewriteRule ^news/nextgen-data-warehouse-oracle-upgrade https://its.umich.edu/news/nextgen-data-warehouse-oracle-upgrade [L,R=301]
@@ -159,7 +182,29 @@ DirectoryIndex index.php index.html index.htm
  RewriteCond %{HTTPS} off
  RewriteRule ^enterprise/wifi-networks/campus-building-network-connections https://its.umich.edu/enterprise/wifi-networks/campus-building-network-connections [L,R=301]
 
+ RewriteCond %{HTTPS} off
+ RewriteRule ^computing/backup-storage/mistorage/rates-billing https://its.umich.edu/computing/backup-storage/mistorage/rates-billing [L,R=301]
 
+ RewriteCond %{HTTPS} off
+ RewriteRule ^accounts-access/getting-access/uniqnames-accounts/mcommunity-sponsorship/individual-form https://its.umich.edu/accounts-access/getting-access/uniqnames-accounts/mcommunity-sponsorship/individual-form [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^accounts-access/getting-access/uniqnames-accounts/mcommunity-sponsorship/multiple-form https://its.umich.edu/accounts-access/getting-access/uniqnames-accounts/mcommunity-sponsorship/multiple-form [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^accounts-access/uniqnames-passwords/shibboleth/attribute-release-request-form https://its.umich.edu/accounts-access/uniqnames-passwords/shibboleth/attribute-release-request-form [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^accounts-access/uniqnames-passwords/shibboleth/configuration-request-form https://its.umich.edu/accounts-access/uniqnames-passwords/shibboleth/configuration-request-form [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^communication/telephone/students/general-phone-service-form https://its.umich.edu/communication/telephone/students/general-phone-service-form [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^communication/telephone/voicemail/exchange-voicemail-request https://its.umich.edu/communication/telephone/voicemail/exchange-voicemail-request [L,R=301]
+
+ RewriteCond %{HTTPS} off
+ RewriteRule ^communication/television-video/live-event-streaming/request-form https://its.umich.edu/communication/television-video/live-event-streaming/request-form [L,R=301]
 
 RewriteCond %{REQUEST_URI} ^/projects/canvas/$
 RewriteCond %{QUERY_STRING}  ^q=project-sites$
@@ -190,7 +235,6 @@ RewriteCond %{REQUEST_URI} ^/projects/canvas/$
 
 
 
-
 RewriteCond %{QUERY_STRING}  ^q=contact$
 RewriteRule ^(.*)$ https://canvas.umich.edu/? [NC,R=301,L]
 
@@ -215,6 +259,9 @@ RewriteRule ^.*building-the-build/?$ http://its.umich.edu/? [L,R=301]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !=/favicon.ico
+  RewriteRule ^ index.php [L]
+
+  RewriteCond %{REQUEST_URI} !cosign/valid
   RewriteRule ^ index.php [L]
 
   # Rules to correctly serve gzip compressed CSS and JS files.
@@ -251,6 +298,9 @@ RewriteRule ^.*building-the-build/?$ http://its.umich.edu/? [L,R=301]
 
 #added so human-created folders bounce back to Drupal
   
+ RewriteCond %{REQUEST_URI} ^/login?$ 
+ RewriteRule ^ /index.php [L]   
+  
  RewriteCond %{REQUEST_URI} ^/projects/?$
  RewriteRule ^ index.php [L]
  
@@ -258,7 +308,7 @@ RewriteRule ^.*building-the-build/?$ http://its.umich.edu/? [L,R=301]
  RewriteRule ^ index.php [L]
 
  RewriteCond %{REQUEST_URI} ^/student-jobs/?$
- RewriteRule ^ index.php [L]
+ RewriteRule ^ /index.php [L]
  
  RewriteCond %{REQUEST_URI} ^/miworkspace/?$
  RewriteRule ^ index.php [L] 
@@ -282,8 +332,10 @@ Redirect 301 /csdc/ http://itcom.itd.umich.edu/
 Redirect 301 /csdc http://itcom.itd.umich.edu
 Redirect 301 /dev/web-strategy/ http://itcs.umich.edu/test/web-strategy/
 Redirect 301 /dev/web-strategy http://itcs.umich.edu/test/web-strategy
-Redirect 301 /deviceconnectionguide/ http://its.umich.edu/computing/wifi-network/device-connection-guide
-Redirect 301 /deviceconnectionguide http://its.umich.edu/computing/wifi-network/device-connection-guide
+Redirect 301 /deviceconnectionguide/ http://its.umich.edu/enterprise/wifi-networks/device-compatibility-guide
+Redirect 301 /deviceconnectionguide http://its.umich.edu/enterprise/wifi-networks/device-compatibility-guide
+Redirect 301 /devicecompatibilityguide/ http://its.umich.edu/enterprise/wifi-networks/device-compatibility-guide
+Redirect 301 /devicecompatibilityguide http://its.umich.edu/enterprise/wifi-networks/device-compatibility-guide
 Redirect 301 /digital-signage http://www.itcs.umich.edu/digital-signage
 Redirect 301 /education /training
 Redirect 301 /eduroam/ http://www.itcom.itd.umich.edu/wireless/eduroam.php
@@ -335,7 +387,7 @@ Redirect 301 /shared-services/index.php http://miworkspace.it.umich.edu/learn/ab
 
 Redirect 301 /sites/connect/ http://itcs.umich.edu/sites/connect/
 Redirect 301 /sites/connect http://itcs.umich.edu/sites/connect
-Redirect 301 /sites/index.php http://itcs.umich.edu/sites/
+Redirect 301 /sites/index.php http://its.umich.edu/computing/computers-software/campus-computing-sites/
 Redirect 301 /sites-locations http://www.itcs.umich.edu/sites/labs/maps/
 
 Redirect 301 /student-jobs/telecom-device-maintenance-temp.php /student-jobs/
@@ -359,14 +411,16 @@ Redirect 301 /web-team-requests https://www.itcs.umich.edu/web-team-requests
 
 Redirect 301 /wificalling/ http://itcom.itd.umich.edu/cellular/wifi-calling.php
 Redirect 301 /wificalling http://itcom.itd.umich.edu/cellular/wifi-calling.php
-Redirect 301 /wifi/ http://itcom.itd.umich.edu/wireless/
-Redirect 301 /wifi http://itcom.itd.umich.edu/wireless
-Redirect 301 /wifisetup/ /computing/wifi-network/wifi/getting-started
-Redirect 301 /wifisetup /computing/wifi-network/wifi/getting-started
-Redirect 301 /wifisetuptool/ https://www.itcom.itd.umich.edu/wireless/setup/
-Redirect 301 /wifisetuptool https://www.itcom.itd.umich.edu/wireless/setup
+#Redirect 301 /wifi/setup/ https://www.itcom.itd.umich.edu/wireless/setup/
+#Redirect 301 /wifi/setup https://www.itcom.itd.umich.edu/wireless/setup/
+#Redirect 301 /wifisetup/ https://www.itcom.itd.umich.edu/wireless/setup/
+#Redirect 301 /wifisetup https://www.itcom.itd.umich.edu/wireless/setup/
+#Redirect 301 /wifisetuptool/ https://www.itcom.itd.umich.edu/wireless/setup/
+#Redirect 301 /wifisetuptool https://www.itcom.itd.umich.edu/wireless/setup
 Redirect 301 /wifiupgrade/ http://its.umich.edu/projects/wifi-upgrade/
 Redirect 301 /wifiupgrade http://its.umich.edu/projects/wifi-upgrade
+#Redirect 301 /wifi/ /enterprise/wifi-networks/wifi
+#Redirect 301 /wifi /enterprise/wifi-networks/wifi
 Redirect 301 /windows-forest/update.html http://itd.umich.edu/windows-forest/upgrade.php
 Redirect 301 /wireless/ http://itcom.itd.umich.edu/wireless/
 Redirect 301 /wireless http://itcom.itd.umich.edu/wireless
@@ -412,3 +466,6 @@ Redirect 301 /computing/wifi-network/wifi/personal-routers /enterprise/wifi-netw
 Redirect 301 /computing/wifi-network/wifi/getting-started /enterprise/wifi-networks/wifi/getting-started
 Redirect 301 /computing/wifi-network/wifi /enterprise/wifi-networks/wifi
 Redirect 301 /accounts-access/uniqnames-passwords/two-factor-authentication/systems-that-require-duo-two-factor /accounts-access/uniqnames-passwords/two-factor-authentication/systems-that-require-duo
+
+#oh man, I hope this doesn't break stuff
+#AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document docx
