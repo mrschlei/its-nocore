@@ -259,7 +259,7 @@ RewriteRule ^.*building-the-build/?$ http://its.umich.edu/? [L,R=301]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !=/favicon.ico
-  RewriteRule ^ index.php [L]
+  #RewriteRule ^ index.php [L]
 
   RewriteCond %{REQUEST_URI} !cosign/valid
   RewriteRule ^ index.php [L]
