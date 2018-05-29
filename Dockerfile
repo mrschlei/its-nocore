@@ -47,7 +47,8 @@ COPY instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
 
 WORKDIR /var/www/html
 RUN unzip drush-7.4.0.zip -d /usr/local/bin
-RUN chmod +x /usr/local/bin/drush
+RUN chmod +x /usr/local/bin/drush-7.4.0
+RUN ln -sf /usr/local/bin/drush-7.4.0/drush /usr/local/bin/drush
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
