@@ -26,6 +26,8 @@ RUN chmod -R g+rw /etc/apache2 \
 
 RUN chmod g+x /etc/ssl/private
 
+WORKDIR /var/www/html
+
 ### Oracle packages and directories
 RUN apt-get install -y apt-utils autoconf gzip libaio1 libaio-dev make zip 
 RUN mkdir /etc/oracle /opt/oracle /usr/lib/oracle 
