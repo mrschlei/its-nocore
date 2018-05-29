@@ -41,7 +41,7 @@ COPY instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
 #RUN mv composer.phar /usr/local/bin/composer
 #RUN composer require drush/drush:7.4
 #RUN export PATH="$HOME/.config/composer/vendor/bin:$PATH" 
-RUN php -r "readfile('https://s3.amazonaws.com/files.drush.org/drush.phar');" > drush \
+RUN php -r "readfile('https://github.com/drush-ops/drush/archive/7.4.0.zip');" > drush \
 && chmod +x drush \
 && mv drush /usr/local/bin
 
