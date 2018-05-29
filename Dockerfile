@@ -31,7 +31,7 @@ RUN apt-get install -y apt-utils autoconf gzip libaio1 libaio-dev make zip
 RUN mkdir /etc/oracle /opt/oracle /usr/lib/oracle 
 RUN chown root.root /etc/oracle /opt/oracle /usr/lib/oracle 
 RUN chmod -R g+w /etc/oracle /opt/oracle /usr/lib/oracle
-RUN mv /var/www/html/instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
+COPY /var/www/html/instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
 ### 
 
 COPY start.sh /usr/local/bin
