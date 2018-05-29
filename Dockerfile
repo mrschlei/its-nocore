@@ -45,10 +45,17 @@ COPY instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
 #&& chmod +x drush \
 #&& mv drush /usr/local/bin
 
+#composer add
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+
 WORKDIR /var/www/html
 RUN unzip drush-7.4.0.zip -d /usr/local/bin
 RUN chmod +x /usr/local/bin/drush-7.4.0
 RUN ln -sf /usr/local/bin/drush-7.4.0/drush /usr/local/bin/drush
+
+#last composer add
+RUN export PATH="$HOME/.config/composer/vendor/bin:$PATH"   
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
