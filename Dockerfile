@@ -36,11 +36,19 @@ RUN chmod -R g+w /etc/oracle /opt/oracle /usr/lib/oracle
 COPY instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
 ### 
 
+<<<<<<< HEAD
 ### Drush install
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 RUN composer require drush/drush
 RUN export PATH="$HOME/.config/composer/vendor/bin:$PATH" 
+=======
+## Drush?
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+RUN composer require drush/drush:6.1
+RUN export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+>>>>>>> e24190d5be6e58f8bf67ad42c5c973c906e324d0
 ###
 
 COPY start.sh /usr/local/bin
