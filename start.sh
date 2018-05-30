@@ -35,3 +35,4 @@ drush @sites cc all --yes
 drush up --no-backup --yes
 
 /usr/local/bin/apache2-foreground
+service apache2 reload
