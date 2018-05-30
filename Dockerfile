@@ -58,6 +58,10 @@ RUN ln -sf /usr/local/bin/drush-7.4.0/drush /usr/local/bin/drush
 #last composer add
 RUN export PATH="$HOME/.config/composer/vendor/bin:$PATH"   
 
+#?????????????
+RUN export ORACLE_HOME=/usr/lib/oracle/12.2/client64
+RUN export LD_LIBRARY_PATH=/opt/oracle/instantclient
+
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
 CMD /usr/local/bin/start.sh
