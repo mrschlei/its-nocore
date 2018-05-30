@@ -48,6 +48,7 @@ COPY instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
 #composer add
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
+RUN alias composer="/usr/local/bin/composer"
 
 WORKDIR /var/www/html
 RUN unzip drush-7.4.0.zip -d /usr/local/bin
