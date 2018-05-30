@@ -38,5 +38,9 @@ cd /var/www/html
 drush @sites cc all --yes
 drush up --no-backup --yes
 
+oc set-env dc/its-nocore ORACLE_HOME=/usr/lib/oracle/12.2/client64
+oc set-env dc/its-nocore PATH:=$ORACLE_HOME
+oc set-env dc/its-nocore TNS_ADMIN=/etc/oracle
+oc set-env dc/its-nocore LD_LIBRARY_PATH:=/opt/oracle/instantclient
+
 /usr/local/bin/apache2-foreground
-service apache2 reload
