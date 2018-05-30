@@ -18,6 +18,10 @@ ln -sf /secrets/ssl/USERTrustRSACertificationAuthority.pem /etc/ssl/certs/USERTr
 ln -sf /secrets/ssl/AddTrustExternalCARoot.pem /etc/ssl/certs/AddTrustExternalCARoot.pem
 ln -sf /secrets/ssl/sha384-Intermediate-cert.pem /etc/ssl/certs/sha384-Intermediate-cert.pem
 
+#bad ideas
+export ORACLE_HOME=/usr/lib/oracle/12.2/client64
+export LD_LIBRARY_PATH=/opt/oracle/instantclient
+
 if [ -f /secrets/app/local.start.sh ]
 then
   /bin/sh /secrets/app/local.start.sh
