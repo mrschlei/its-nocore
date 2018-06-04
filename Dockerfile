@@ -55,9 +55,13 @@ RUN unzip drush-6.1.0.zip -d /usr/local/bin
 RUN chmod +x /usr/local/bin/drush
 RUN chmod +x /usr/local/bin/drush/drush
 #RUN chmod 755 /usr/local/bin/drush
-RUN chmod 775 /usr/local/bin/drush
 #RUN chmod 755 /usr/local/bin/drush/drush
+
+RUN chown -R root:root /usr/local/bin/drush
+#RUN chmod 775 /usr/local/bin/drush
+RUN chown -R root:root /usr/local/bin/drush/drush
 RUN chmod 775 /usr/local/bin/drush/drush
+
 #RUN ln -sf /usr/local/bin/drush-6.1.0/drush /usr/local/bin/drush
 #RUN unzip drush-7.4.0.zip -d /usr/local/bin
 #RUN chmod +x /usr/local/bin/drush-7.4.0
