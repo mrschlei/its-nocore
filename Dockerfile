@@ -1,5 +1,6 @@
 FROM drupal7-cosign:latest
 
+WORKDIR /var/www/html/
 COPY . /var/www/html/
 
 # Section that sets up Apache and Cosign to run as non-root user.
@@ -26,55 +27,25 @@ RUN chmod -R g+rw /etc/apache2 \
 
 RUN chmod g+x /etc/ssl/private
 
-WORKDIR /var/www/html
+### composer install 
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+RUN alias composer="/usr/local/bin/composer"
+###
 
-### Oracle packages and directories
+### drush install
+RUN unzip drush-6.1.0.zip -d /usr/local/bin
+RUN chown -R root:root /usr/local/bin/drush
+RUN chmod +x /usr/local/bin/drush/drush
+###
+
+### Oracle instantclient packages and directories
 RUN apt-get install -y apt-utils autoconf gzip libaio1 libaio-dev make zip 
 RUN mkdir /etc/oracle /opt/oracle /usr/lib/oracle 
 RUN chown root.root /etc/oracle /opt/oracle /usr/lib/oracle
 RUN chmod -R g+w /etc/oracle /opt/oracle /usr/lib/oracle
 COPY instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
 ### 
-
-### Drush install
-#RUN curl -sS https://getcomposer.org/installer | php
-#RUN mv composer.phar /usr/local/bin/composer
-#RUN composer require drush/drush:7.4
-#RUN export PATH="$HOME/.config/composer/vendor/bin:$PATH" 
-#RUN php -r "readfile('https://github.com/drush-ops/drush/archive/7.4.0.zip');" > drush \
-#&& chmod +x drush \
-#&& mv drush /usr/local/bin
-
-#composer add
-RUN curl -sS https://getcomposer.org/installer | php
-RUN mv composer.phar /usr/local/bin/composer
-RUN alias composer="/usr/local/bin/composer"
-
-WORKDIR /var/www/html
-
-#RUN unzip drush-6.1.0.zip -d /usr/local/bin
-##RUN chmod +x /usr/local/bin/drush
-#RUN chmod +x /usr/local/bin/drush/drush
-##RUN chmod 755 /usr/local/bin/drush
-#RUN chmod 755 /usr/local/bin/drush/drush
-
-#RUN chown -R root:root /usr/local/bin/drush
-##RUN chmod 775 /usr/local/bin/drush
-#RUN chown -R root:root /usr/local/bin/drush/drush
-#RUN chmod 775 /usr/local/bin/drush/drush
-
-##RUN ln -sf /usr/local/bin/drush-6.1.0/drush /usr/local/bin/drush
-##RUN unzip drush-7.4.0.zip -d /usr/local/bin
-##RUN chmod +x /usr/local/bin/drush-7.4.0
-##RUN ln -sf /usr/local/bin/drush-7.4.0/drush /usr/local/bin/drush
-
-##last composer add
-##RUN export PATH="$HOME/.config/composer/vendor/bin:$PATH"   
-
-RUN unzip drush-6.1.0.zip -d /usr/local/bin
-#RUN mkdir /usr/local/bin/drush
-RUN chown -R root:root /usr/local/bin/drush
-RUN chmod +x /usr/local/bin/drush/drush
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
