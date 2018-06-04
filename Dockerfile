@@ -54,8 +54,6 @@ WORKDIR /var/www/html
 RUN unzip drush-6.1.0.zip -d /usr/local/bin
 RUN chmod +x /usr/local/bin/drush-6.1.0
 RUN ln -sf /usr/local/bin/drush-6.1.0/drush /usr/local/bin/drush
-
-RUN unzip Console_Table-1.1.3.tgz -d /usr/local/bin/drush-6.1.0/lib
 #RUN unzip drush-7.4.0.zip -d /usr/local/bin
 #RUN chmod +x /usr/local/bin/drush-7.4.0
 #RUN ln -sf /usr/local/bin/drush-7.4.0/drush /usr/local/bin/drush
