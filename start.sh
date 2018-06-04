@@ -34,6 +34,17 @@ a2enmod ssl
 a2enmod include
 a2ensite default-ssl 
 
+## Drush stuff
+unzip drush-6.1.0.zip -d /usr/local/bin
+chown -R root:root /usr/local/bin/drush
+chmod +x /usr/local/bin/drush/drush
+#RUN ln -sf /usr/local/bin/drush-6.1.0/drush /usr/local/bin/drush
+
+#RUN unzip drush-7.4.0.zip -d /usr/local/bin
+#RUN chmod +x /usr/local/bin/drush-7.4.0
+#RUN ln -sf /usr/local/bin/drush-7.4.0/drush /usr/local/bin/drush
+## 
+
 cd /var/www/html
 drush @sites cc all --yes
 drush up --no-backup --yes
