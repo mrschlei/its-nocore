@@ -51,9 +51,12 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN alias composer="/usr/local/bin/composer"
 
 WORKDIR /var/www/html
-RUN unzip drush-7.4.0.zip -d /usr/local/bin
-RUN chmod +x /usr/local/bin/drush-7.4.0
-RUN ln -sf /usr/local/bin/drush-7.4.0/drush /usr/local/bin/drush
+RUN unzip drush-6.1.0.zip -d /usr/local/bin
+RUN chmod +x /usr/local/bin/drush-6.1.0
+RUN ln -sf /usr/local/bin/drush-6.1.0/drush /usr/local/bin/drush
+#RUN unzip drush-7.4.0.zip -d /usr/local/bin
+#RUN chmod +x /usr/local/bin/drush-7.4.0
+#RUN ln -sf /usr/local/bin/drush-7.4.0/drush /usr/local/bin/drush
 
 #last composer add
 RUN export PATH="$HOME/.config/composer/vendor/bin:$PATH"   
