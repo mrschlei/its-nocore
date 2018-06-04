@@ -30,9 +30,6 @@ a2enmod ssl
 a2enmod include
 a2ensite default-ssl 
 
-# drush installed in Dockerfile
-alias drush="/usr/local/bin/drush/drush"
-
 drush @sites cc all --yes
 #drush up --no-backup --yes
 
