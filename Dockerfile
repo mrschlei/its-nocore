@@ -71,9 +71,10 @@ WORKDIR /var/www/html
 ##last composer add
 ##RUN export PATH="$HOME/.config/composer/vendor/bin:$PATH"   
 
+RUN unzip drush-6.1.0.zip -d /usr/local/bin
 #RUN mkdir /usr/local/bin/drush
-#RUN chown -R root:root /usr/local/bin/drush
-#RUN chmod +x /usr/local/bin/drush/drush
+RUN chown -R root:root /usr/local/bin/drush
+RUN chmod +x /usr/local/bin/drush/drush
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
