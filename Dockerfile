@@ -27,6 +27,15 @@ RUN chmod -R g+rw /etc/apache2 \
 
 RUN chmod g+x /etc/ssl/private
 
+### Oracle instantclient packages and directories
+### put this before the others, as it installs gzip, make and zip
+RUN apt-get install -y apt-utils autoconf gzip libaio1 libaio-dev make zip 
+RUN mkdir /etc/oracle /opt/oracle /usr/lib/oracle 
+RUN chown root.root /etc/oracle /opt/oracle /usr/lib/oracle
+RUN chmod -R g+w /etc/oracle /opt/oracle /usr/lib/oracle
+COPY instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
+### 
+
 ### composer install 
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
@@ -39,13 +48,6 @@ RUN chown -R root:root /usr/local/bin/drush
 RUN chmod +x /usr/local/bin/drush/drush
 ###
 
-### Oracle instantclient packages and directories
-RUN apt-get install -y apt-utils autoconf gzip libaio1 libaio-dev make zip 
-RUN mkdir /etc/oracle /opt/oracle /usr/lib/oracle 
-RUN chown root.root /etc/oracle /opt/oracle /usr/lib/oracle
-RUN chmod -R g+w /etc/oracle /opt/oracle /usr/lib/oracle
-COPY instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
-### 
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
