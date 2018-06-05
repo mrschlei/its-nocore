@@ -1,0 +1,4 @@
+name = MCommunity Field Validator
+description = attempts to validate MComm groupd via an LDAP query
+core = 7.x
+files[] = mcommunity_field_validator.module

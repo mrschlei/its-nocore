@@ -1,0 +1,54 @@
+<?php
+/**
+ * @file
+ * Code for the UL meeting content type feature.
+ */
+
+function url_field_validator_form_alter(&$form, &$form_state, $form_id) {
+	
+	if ($form_id == 'webform_client_form_10') {
+//echo "<pre>";var_dump($form["submitted"]);echo "</pre>";
+		$form["submitted"]["sitename_umich"]["#element_validate"][] = 'url_field_validator_form_new_account_application_node_form_alter';
+		$form["submitted"]["sitename_web"]["#element_validate"][] = 'url_field_validator_form_new_account_application_node_form_alter';
+
+	}
+}
+
+
+/**
+ * FAPI validation of an individual number element.
+ */
+function url_field_validator_form_new_account_application_node_form_alter($element, &$form_state) {
+	if (isset($element['#value'])) {
+		
+		//$instance = field_widget_instance($element, $form_state);
+		if (!isset($element['#field_parents'])) {
+		$instance['label'] = $element["#title"];
+		}
+		else {
+			$instance = field_widget_instance($element, $form_state);
+		}
+
+		if (isset($element['#value'])) {
+			$url = $element['#value'].".web.umich.edu";
+			$urlh = "https://".$element['#value'].".web.umich.edu";
+			//$url = "google.com";
+			if (filter_var($urlh, FILTER_VALIDATE_URL)) {
+				//https://gist.github.com/anonymous/10967187
+				//echo("<p>$url is probably a valid URL.</p>");
+				//URL is syntax-correct, does it exist?
+				if ( gethostbyname($url) != $url) {
+					$message = t("%urlh is already taken!", array('%urlh' => $urlh));
+					form_error($element, $message);
+				}
+				else {
+					//echo "$urlh is valid and available";
+				}
+			}
+			else {
+				$message = t('%url doesn\'t appear to be <a href="https://www.ietf.org/rfc/rfc3986.txt">a valid URL</a>.', array('%url' => $url));
+				form_error($element, $message);
+			}
+		}
+	}
+}

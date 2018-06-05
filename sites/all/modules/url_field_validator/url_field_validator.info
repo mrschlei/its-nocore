@@ -1,0 +1,4 @@
+name = URL Field Validator
+description = attempts to validate URLs via curl and PHP filter checks
+core = 7.x
+files[] = url_field_validator.module

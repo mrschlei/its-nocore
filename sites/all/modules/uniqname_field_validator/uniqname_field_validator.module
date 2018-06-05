@@ -1,0 +1,54 @@
+<?php
+/**
+ * @file
+ * Code for the UL meeting content type feature.
+ */
+
+function uniqname_field_validator_form_alter(&$form, &$form_state, $form_id) {
+	//web platform services /request form=webform_client_form_10, tho
+	if ($form_id == 'webform_client_form_10') {
+		if (isset($form["submitted"]["account_owner"])) {
+			$form["submitted"]["account_owner"]["#other_element_validate"][] = 'uniqname_field_validator_form_webform_client_form_10_alter';
+  		}
+	}   
+}
+
+
+/**
+ * FAPI validation of an individual number element.
+ */
+function uniqname_field_validator_form_webform_client_form_10_alter($element, &$form_state) {
+
+	if (isset($element['#value'])) {
+		if ($element['#value'] !== "") {
+			//echo "<pre>";var_dump($element['#value']);echo "</pre>";
+			$dator = $element['#value'];
+			if (strpos($dator, '@umich.edu') !== false) {
+    			//remove @umich.edu and reassign
+				$dator = str_replace("@umich.edu","",$dator);
+			}
+			//check in LDAP if person exists
+			$ldaphost = "ldaps://ldap.umich.edu"; 
+			$ldapport = 636;
+			$ldapconn = ldap_connect($ldaphost, $ldapport);
+		  
+			if ($ldapconn) {		
+				$ldapbind = ldap_bind($ldapconn);
+				if ($ldapbind) {
+					$dn = "ou=People,dc=umich,dc=edu";
+					$query = "(uid=$dator)";
+					$result = ldap_search($ldapconn, $dn, $query);
+					$ldapcount = ldap_count_entries($ldapconn,$result);
+					if (isset($ldapcount) && $ldapcount > 0) {
+						$info = ldap_get_entries($ldapconn, $result);
+						//http://documentation.its.umich.edu/node/374
+					}
+					else {
+						$message = t('Invalid uniqname: %field', array('%field' => $dator));
+						form_error($element, $message);
+					}			
+				}
+			}
+		}
+	}
+}
