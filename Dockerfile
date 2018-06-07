@@ -43,6 +43,7 @@ RUN alias composer="/usr/local/bin/composer"
 ###
 
 ### drush install
+RUN chmod 777 /var/www/html
 #RUN composer require drush/drush:7.4.0
 #RUN alias drush="/var/www/html/vendor/drush/drush/drush"
 #RUN unzip drush-7.4.0.zip -d /usr/local/bin
