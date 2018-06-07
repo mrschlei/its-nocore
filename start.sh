@@ -24,7 +24,9 @@ then
 fi
 
 #attempt pear install...
-pear install Console_Table
+#pear install Console_Table
+composer require drush/drush:7.4.0
+alias drush="/var/www/html/vendor/drush/drush/drush"
 
 ## Rehash command needs to be run before starting apache.
 c_rehash /etc/ssl/certs >/dev/null
@@ -33,7 +35,7 @@ a2enmod ssl
 a2enmod include
 a2ensite default-ssl 
 
-drush @sites cc all --yes
+#drush @sites cc all --yes
 #drush up --no-backup --yes
 
 /usr/local/bin/apache2-foreground
