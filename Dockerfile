@@ -29,7 +29,7 @@ RUN chmod g+x /etc/ssl/private
 
 ### Oracle instantclient packages and directories
 ### put this before the others, as it installs gzip, make and zip
-RUN apt-get install -y apt-utils autoconf gzip libaio1 libaio-dev make zip mysql-client mysql-server
+RUN apt-get install -y apt-utils autoconf gzip libaio1 libaio-dev make zip mysql-client
 RUN mkdir /etc/oracle /opt/oracle /usr/lib/oracle 
 RUN chown root.root /etc/oracle /opt/oracle /usr/lib/oracle
 RUN chmod -R g+w /etc/oracle /opt/oracle /usr/lib/oracle
