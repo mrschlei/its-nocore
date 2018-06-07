@@ -43,10 +43,10 @@ RUN alias composer="/usr/local/bin/composer"
 ###
 
 ### drush install
-RUN unzip drush-6.1.0.zip -d /usr/local/bin
-RUN chown -R root:root /usr/local/bin/drush
-RUN chmod +x /usr/local/bin/drush/drush
-RUN alias drush="/usr/local/bin/drush/drush"
+RUN unzip drush-7.4.0.zip -d /usr/local/bin
+RUN chown -R root:root /usr/local/bin/drush-7.4.0
+RUN chmod +x /usr/local/bin/drush-7.4.0/drush
+RUN alias drush="/usr/local/bin/drush-7.4.0/drush"
 #RUN pear install Console_Table
 ###
 
