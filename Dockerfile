@@ -53,8 +53,8 @@ RUN alias composer="/usr/local/bin/composer"
 #RUN chmod +x /usr/local/bin/drush-7.4.0/drush
 #RUN alias drush="/usr/local/bin/drush-7.4.0/drush"
 #RUN pear install Console_Table
-RUN mv /secrets/app/settings.php /var/www/html/sites/default/settings.php
-RUN mv /secrets/app/its.webplatformsnonprod.umich.edu.internship.settings.php /var/www/html/sites/its.webplatformsnonprod.umich.edu.internship/settings.php
+#RUN mv /secrets/app/settings.php /var/www/html/sites/default/settings.php
+#RUN mv /secrets/app/its.webplatformsnonprod.umich.edu.internship.settings.php /var/www/html/sites/its.webplatformsnonprod.umich.edu.internship/settings.php
 ###
 
 
