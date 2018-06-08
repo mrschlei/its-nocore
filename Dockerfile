@@ -1,11 +1,19 @@
 FROM drupal7-cosign:latest
 
-WORKDIR /var/www/html/
 COPY . /var/www/html/
 
 # Section that sets up Apache and Cosign to run as non-root user.
 EXPOSE 8080
 EXPOSE 8443
+
+## install PHP 5.6 so multi-site works
+RUN mv php-5.6.36.tar.gz /var/tmp
+WORKDIR /var/tmp
+RUN tar xzvf php-5.6.36.tar.gz \
+	&& cd php-5.6.36 \
+	&& ./configure \
+	&& make \
+	&& make install
 
 ### change directory owner, as openshift user is in root group.
 RUN chown -R root:root /etc/apache2 \
