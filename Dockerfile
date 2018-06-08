@@ -43,7 +43,7 @@ RUN alias composer="/usr/local/bin/composer"
 ###
 
 ### drush install
-RUN alias drush="/var/www/html/vendor/drush/drush/drush"
+#RUN alias drush="/var/www/html/vendor/drush/drush/drush"
 #RUN chmod -R 777 /var/www/html
 #RUN chmod -R 777 /
 #RUN composer require drush/drush:7.4.0
@@ -53,6 +53,8 @@ RUN alias drush="/var/www/html/vendor/drush/drush/drush"
 #RUN chmod +x /usr/local/bin/drush-7.4.0/drush
 #RUN alias drush="/usr/local/bin/drush-7.4.0/drush"
 #RUN pear install Console_Table
+RUN mv /secrets/app/settings.php /var/www/html/sites/default/settings.php
+RUN mv /secrets/app/its.webplatformsnonprod.umich.edu.internship.settings.php /var/www/html/sites/its.webplatformsnonprod.umich.edu.internship/settings.php
 ###
 
 
