@@ -27,7 +27,7 @@ fi
 #pear install Console_Table
 composer require drush/drush:7.4.0
 #composer require drush/drush:8.x
-alias drush="/var/www/html/vendor/drush/drush/drush"
+
 
 ## Rehash command needs to be run before starting apache.
 c_rehash /etc/ssl/certs >/dev/null
