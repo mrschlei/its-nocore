@@ -7,13 +7,6 @@ COPY . /var/www/html/
 EXPOSE 8080
 EXPOSE 8443
 
-## install PHP 5.6 so multi-site works
-#RUN tar xzvf php-5.6.36.tar.gz \
-#	&& cd php-5.6.36 \
-#	&& ./configure \
-#	&& make \
-#	&& make install
-
 ### change directory owner, as openshift user is in root group.
 RUN chown -R root:root /etc/apache2 \
 	/etc/ssl/certs /etc/ssl/private \
@@ -65,7 +58,6 @@ RUN alias composer="/usr/local/bin/composer"
 #RUN mv /secrets/app/settings.php /var/www/html/sites/default/settings.php
 #RUN mv /secrets/app/its.webplatformsnonprod.umich.edu.internship.settings.php /var/www/html/sites/its.webplatformsnonprod.umich.edu.internship/settings.php
 ###
-
 
 COPY start.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/start.sh
