@@ -8,6 +8,7 @@ EXPOSE 8443
 
 ## install PHP 5.6 so multi-site works
 RUN mv php-5.6.36.tar.gz /var/tmp
+RUN cd /var/tmp
 WORKDIR /var/tmp
 RUN tar xzvf php-5.6.36.tar.gz \
 	&& cd php-5.6.36 \
