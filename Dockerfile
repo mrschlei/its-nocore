@@ -8,11 +8,11 @@ EXPOSE 8080
 EXPOSE 8443
 
 ## install PHP 5.6 so multi-site works
-RUN tar xzvf php-5.6.36.tar.gz \
-	&& cd php-5.6.36 \
-	&& ./configure \
-	&& make \
-	&& make install
+#RUN tar xzvf php-5.6.36.tar.gz \
+#	&& cd php-5.6.36 \
+#	&& ./configure \
+#	&& make \
+#	&& make install
 
 ### change directory owner, as openshift user is in root group.
 RUN chown -R root:root /etc/apache2 \
