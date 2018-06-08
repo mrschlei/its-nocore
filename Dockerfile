@@ -40,6 +40,17 @@ COPY instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 RUN alias composer="/usr/local/bin/composer"
+
+##new mess
+# Create and/or navigate to a path for the single Composer Drush install.
+RUN mkdir --parents /opt/drush-8.x
+RUN cd /opt/drush-8.x
+# Initialise a new Composer project that requires Drush.
+RUN composer init --require=drush/drush:8.* -n
+# Configure the path Composer should use for the Drush vendor binaries.
+RUN composer config bin-dir /usr/local/bin
+# Install Drush. 
+RUN composer install
 ###
 
 ### drush install
