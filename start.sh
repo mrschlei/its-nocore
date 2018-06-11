@@ -26,7 +26,7 @@ fi
 #attempt pear install...
 #pear install Console_Table
 
-composer require drush/drush:7.4.0
+#composer require drush/drush:7.4.0
 ln -sf /var/www/html/vendor/drush/drush /usr/local/bin/drush
 #composer require drush/drush:8.x
 
