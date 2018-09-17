@@ -1,4 +1,0 @@
-name = Shortcode Field Validator
-description = attempts to validate shortcodes via an RDA service
-core = 7.x
-files[] = shortcode_field_validator.module
