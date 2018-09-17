@@ -1,4 +1,0 @@
-name = Uniqname Field Validator
-description = attempts to validate uniqnames via an LDAP query
-core = 7.x
-files[] = uniqname_field_validator.module
